@@ -1,0 +1,180 @@
+
+.menu, .menu ul /* Liste */     
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 27px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+.menu /* Ensemble du menu */
+{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0,118,174);
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        width: 945px;
+        height: 55px;
+        border-radius: 60px 0px 0px 0px;
+}
+
+.menu a /* Contenu des listes */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intérieure */       
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 168px; /* largeur */
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.menu a:hover
+{
+
+}
+.menu li ul li:hover
+{
+        background : green; /* couleur de fond */        
+        color :#fff ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
+.menu li /* Éléments des listes */      
+{ 
+        float : left; 
+
+        border-right : 0px solid rgb(41,34,104); /* on met une bordure blanche à droite de chaque élément */
+        border-left : 0px solid rgb(35,37,122); 
+        border-bottom: 0px solid rgb(35,37,122);
+        border-top: 0px solid rgb(35,37,122);
+
+}
+
+
+
+.menu li ul /* Sous-listes */
+{ 
+        border-top: 0px solid rgb(35,37,122); /* on met une bordure blanche en haut de chaque élément d'une sous-liste */
+        position: absolute; /* Position absolue */
+        width: 144px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+        
+}
+
+
+.menu li ul li /* Eléments de sous-listes */
+{
+        background-color:rgb(85,185,244);
+        border-top: 1px solid rgb(35,37,122);
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
+
+.menu li:hover ul, #menu li li:hover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+}
+.barrem
+{
+    display: flex ;
+    justify-content: center;
+    align-items: flex-end;
+    height: 157px;
+}
+
+.menub, .menub ul /* Liste */     
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 27px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+.menub /* Ensemble du menu */
+{
+        display: flex;
+        justify-content: flex-start;
+        align-items: centre;
+        background-color: rgb(0,118,174);
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        height: 55px;
+}
+
+.menub a /* Contenu des listes */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intérieure */       
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 168px; /* largeur */
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.menub a:hover
+{
+
+}
+.menub li ul li:hover
+{
+        background : green; /* couleur de fond */        
+        color :#fff ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
+.menub li /* Éléments des listes */      
+{ 
+        float : left; 
+}
+
+.menub li ul /* Sous-listes */
+{ 
+        position: absolute; /* Position absolue */
+        width: 144px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+        
+}
+
+
+.menub li ul li /* Eléments de sous-listes */
+{
+        background-color:rgb(85,185,244);
+        border-top: 1px solid rgb(35,37,122);
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
+
+.menub li:hover ul, #menu li li:hover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+}
+.barremb
+{
+    display: flex ;
+    justify-content: flex-start;
+    height: 157px;
+}

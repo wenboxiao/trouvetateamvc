@@ -1,0 +1,234 @@
+.green{
+color: rgb(0,176,80) ;
+}
+.blue{
+color: rgb(0,118,174);
+}
+.red{
+color: rgb(233,7,13,1);
+}
+.profil{
+	display: flex;
+    flex-direction: column;
+
+}
+.bonjour{
+	flex:7;
+	display: flex;
+	justify-content:center;
+}
+
+.boutonp{
+	flex:7;
+	display: flex;
+	justify-content: space-between;
+}
+.boutonpc{
+	flex:7;
+	display: flex;
+	justify-content:spacearound;
+}
+.px{
+	flex:0.2;
+}
+
+.bouton
+{
+	background-color:rgba(233,7,13,1);
+	text-decoration: none;
+	color: white;
+	background-color:rgba(233,7,13,1);
+	text-decoration: none;
+	color: white;
+
+	height: 21px;
+    border: 8px red outset;
+}
+
+.bouton:hover 
+{	
+	height: 21px;
+    border: 8px rgba(233,7,13,1) solid;
+	
+}
+.bouton3
+{
+	background-color:rgba(233,7,13,1);
+	text-decoration: none;
+	color: white;
+	background-color:rgba(233,7,13,1);
+	text-decoration: none;
+	color: white;
+
+	height: 60px;
+    border: 8px red outset;
+    font-size: 32px;
+    font-family:Comic Sans MS;
+}
+
+.bouton3:hover 
+{	
+	height: 60px;
+    border: 8px rgba(233,7,13,1) solid;
+	
+}
+.boutonp3{
+	display:flex;
+	justify-content: center;
+}
+.bouton2{
+	background-color: rgb(0,118,174);
+	display: flex
+	justify-content: space-between;
+	text-decoration: none;
+	color: white ;
+	height: 21px;
+    border: 8px rgb(0,153,204) outset;
+    min-width: 80px
+}
+.bouton2:hover{
+	height: 21px;
+    border: 8px rgb(0,118,174)solid;
+}
+.bouton2:visited
+{
+	background-color: rgb(16,166,97);
+	display: flex;
+	justify-content: space-between;
+	text-decoration: none;
+	color: white ;
+	height: 21px;
+    border: 8px rgb(15,157,88) outset;
+   	min-width: 80px
+}
+.bouton2:visited:hover
+{
+	height: 21px;
+    border: 8px rgb(16,166,97)solid;
+}
+.tetep
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.puce
+{	border-radius: 120px 0px 0px 0px;
+	flex:20;
+	display: flex;
+	justify-content: space-around;
+   list-style-type:none;
+}
+
+.barre{	
+	flex:20;
+    background-color: rgb(0,118,174);
+    align-self: flex-end;
+    border-radius: 50px 0px 0px 0px;
+}
+.coin{
+	width: 220px;
+	height: 157px;
+	display: flex;
+	flex-direction: column;
+}
+.barrep{
+	height: 55px;
+	background-color: rgb(0,118,174);
+}
+.lien
+{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+.lien:hover{
+	text-decoration: underline;
+}
+
+.decox{
+	text-decoration: none;
+	color:rgb(0,118,174);
+}
+.decox:hover{
+	color: rgb(0,176,80);
+}
+.titrevert{
+	color:rgb(0,176,80);
+	display:flex;
+	justify-content: center;
+}
+.titrebleu{
+	color:rgb(0,118,174);
+	display:flex;
+	justify-content: center;
+}
+.titrebleu2{
+	color:rgb(0,118,174);
+	display:flex;
+	
+}
+.titrerouge{
+	color:rgba(233,7,13,1);
+	display:flex;
+	justify-content: center;
+}
+
+.spacearound{
+	display: flex;
+	justify-content: space-around;
+}
+
+.centrerco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.centrer{
+	display: flex;
+	justify-content:center;
+}
+
+.search{
+	display: flex;
+ 	height: 60px;
+ 	background-color: rgb(0,118,174);
+ 	align-items: center;
+ 	justify-content:space-around;
+}
+.searchf{
+	display: flex;
+	flex:0.9995;
+	background-color: rgb(0,118,174);
+	justify-content: space-around;
+
+}
+select{
+	color: rgb(0,118,174);
+	height: 28px;
+	font-size: 16px;
+}
+input{
+	color: rgb(0,118,174);
+	height: 22px;
+	font-size: 16px;
+}
+.pss{
+	display:flex;
+	justify-content: center;
+
+}
+.titrevert2{
+	color:rgb(0,176,80);
+	display:flex;
+	justify-content: center;
+	font-size: 27px;
+}
+.space{
+	height: 12px;
+}
+.space2{
+	width: 520px;
+}
