@@ -18,7 +18,7 @@
  
         
           <div class="centrerco">
-          <div class="spacearound"> <h2 class="titrerouge">Mes Teams:</h2></div><br />
+          <div class="spacearound"> <h2 class="titrerouge">Mes Teamse:</h2></div><br />
           
          <p> 
          
