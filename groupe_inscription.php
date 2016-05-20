@@ -13,7 +13,7 @@
         <div class="space"></div>     
         <form method="post" action="groupe_php.php" class="centrerco">
           <div class="centrerco">
-          	<input type="text" name="Nom_team" id="Nom_team"  placeholder="*Nom de la team" size="25" maxlength="70" /><br />
+          	<input type="text" name="Nom_team" id="Nom_team"  placeholder="Nom de la team" size="25" maxlength="70" /><br />
               <input type="text" name="Sport" id="Sport" placeholder="*Sport" size="25" /><br />
               <input type="text" name="Ville" id="Ville" placeholder="*Ville" size="25"  /><br />
               <input type="text" name="Club" id="Club" placeholder="Club" size="25" /><br />

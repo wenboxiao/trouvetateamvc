@@ -26,21 +26,16 @@
 	
 
  while ($donneesu = $requ->fetch() ){
- 	
- 	echo $donneesu['nomgroupe'].'                         '. '<a  href="groupe_profil.php"><input type="submit"  value="+ de détails"  class=titrebleu2 ></a>'.'</br>';
  
- 	$_GET['nom_team']=$donneesu['nomgroupe'];
  	$ville_id=$donneesu['ville_id'];
  	$sport_id=$donneesu['id_sport'];
- 	$_GET['description_team']=$donneesu['descriptiongroupe'];
  	$club_id=$donneesu['id_club'];
- 	
  	
  	$reqi = $bddu->prepare('SELECT ville_nom_reel FROM villes_france_free WHERE ville_id = ?');
  	$reqi->execute(array($ville_id));
  	
  	if ($donneesi = $reqi->fetch()) {
- 		$_GET['ville_team']=$donneesi['ville_nom_reel'];
+ 		$ville=$donneesi['ville_nom_reel'];
  	}
  	
  	
@@ -50,7 +45,7 @@
  	$reqi->execute(array($sport_id));
  	
  	if ($donneesi = $reqi->fetch()) {
- 		$_GET['sport_team']=$donneesi['nomsport'];
+ 		$sport=$donneesi['nomsport'];
  	}
  	
  	
@@ -60,11 +55,28 @@
  	$reqi->execute(array($club_id));
  	
  	if ($donneesi = $reqi->fetch()) {
- 		$_GET['club_team']=$donneesi['nomclub'];			
+ 		$club=$donneesi['nomclub'];
  	}
  	
-
+ 	
  	$reqi->closeCursor();
+ 	
+ 	
+ 	echo $donneesu['nomgroupe'].
+ 	'<form method="post"  action="groupe_profil.php">
+ 			<input  name="id_groupe" type="hidden"  value="'.$donneesu['id_groupe'].'" >
+ 			<input  name="nom_team" type="hidden"  value="'.$donneesu['nomgroupe'].'" >
+ 			<input  name="description_team" type="hidden"  value="'.$donneesu['descriptiongroupe'].'" >
+ 			<input  name="ville_team" type="hidden"  value="'.$ville.'" >
+ 			<input  name="sport_team" type="hidden"  value="'.$sport.'" >
+ 			<input  name="club_team" type="hidden"  value="'.$club.'" >
+ 					
+ 					<button type="submit">+ de détails</button></form>'.'</br>';
+ 
+ 	
+
+ 	
+ 	
  }
  	$requ->closeCursor();
 
