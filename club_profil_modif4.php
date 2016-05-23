@@ -13,13 +13,22 @@
      <section>
      <div class="club_profil">
            <div class="spacearound"> <h4 class="titrerouge">Modifications effectuées</h4></div><br />
-     <div class="spacearound"><div class="space2"></div><h3 class="blue">Nom du club </h3> <h3 class="green"><?php echo  	$_GET['nom_club']; ?></h3><div class="space2"></div></div>
-     	<div class="spacearound"><div class="space2"></div><h3 class="blue">Sport </h3> <h3 class="green"><?php echo  $_GET['sport_club']; ?></h3><div class="space2"></div></div>
-        <div class="spacearound"><div class="space2"></div><h3 class="blue">Ville </h3> <h3 class="green"><?php echo  $_GET['ville_club']; ?></h3><div class="space2"></div></div>
-        <div class="spacearound"><div class="space2"></div><h3 class="blue">Adresse</h3> <h3 class="green"><?php echo  $_GET['adresse_club']; ?></h3><div class="space2"></div></div>
-        <div class="spacearound"><div class="space2"></div><h3 class="blue">E-mail </h3> <h3 class="green"><?php echo  $_GET['mail_club']; ?></h3><div class="space2"></div></div>
-        <div class="spacearound"><div class="space2"></div><h3 class="blue">Description </h3> <h3 class="green"><?php echo  $_GET['description_club']; ?></h3><div class="space2"></div></div>
-        <div class="spacearound"><h3><a href="club_profil_modif.php" class="decox"> Modifier </a></h3></div>
+       <div class="spacearound"><div class="space2"></div><h3 class="blue">Nom du club </h3> <h3 class="green"><?php echo  	$_POST['nom_club']; ?></h3><div class="space2"></div></div>
+     	<div class="spacearound"><div class="space2"></div><h3 class="blue">Sport </h3> <h3 class="green"><?php echo  $_POST['sport_club']; ?></h3><div class="space2"></div></div>   
+        <div class="spacearound"><div class="space2"></div><h3 class="blue">Ville </h3> <h3 class="green"><?php echo  $_POST['ville_club']; ?></h3><div class="space2"></div></div>
+        <div class="spacearound"><div class="space2"></div><h3 class="blue">Adresse</h3> <h3 class="green"><?php echo  $_POST['adresse_club']; ?></h3><div class="space2"></div></div>
+        <div class="spacearound"><div class="space2"></div><h3 class="blue">E-mail </h3> <h3 class="green"><?php echo  $_POST['mail_club']; ?></h3><div class="space2"></div></div>
+        <div class="spacearound"><div class="space2"></div><h3 class="blue">Description </h3> <h3 class="green"><p><?php echo  $_POST['description_club']; ?></p></h3><div class="space2"></div></div>
+          
+           <form method="post"  action="club_profil_modif.php">
+            <input  name="nom_club" type="hidden"  value="<?php echo $_POST['nom_club']; ?>" >
+ 			<input  name="description_club" type="hidden"  value="<?php echo $_POST['description_club']; ?>" >
+ 			<input  name="ville_club" type="hidden"  value="<?php echo  $_POST['ville_club']; ?>" >
+ 			<input  name="sport_club" type="hidden"  value="<?php echo  $_POST['sport_club']; ?>" >
+ 			<input  name="adresse_club" type="hidden"  value="<?php echo  $_POST['adresse_club']; ?>" >
+            <input  name="mail_club" type="hidden"  value="<?php echo  $_POST['mail_club']; ?>" >
+ 			
+ 			<div class="spacearound"><h3><button type=submit class="decox"> Modifier</button></h3></div></form>
     </div>
     <footer >
     	<?php include("Barrer.php"); ?>

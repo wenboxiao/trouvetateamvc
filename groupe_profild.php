@@ -70,7 +70,7 @@
  			<input  name="ville_team" type="hidden"  value="'.$ville.'" >
  			<input  name="sport_team" type="hidden"  value="'.$sport.'" >
  			<input  name="club_team" type="hidden"  value="'.$club.'" >
- 					
+ 			<input  name="nbmembres" type="hidden"  value="'.$donneesu['nombremembres'].'" >		
  					<button type="submit">+ de détails</button></form>'.'</br>';
  
  	

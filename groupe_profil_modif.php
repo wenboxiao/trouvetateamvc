@@ -23,18 +23,17 @@
               <label for="Ville">Ville :</label> <input type="text" name="Ville" id="Ville" value="<?php echo $_POST['ville_team']; ?>" size="25" /><br />
               <label for="Club">Club :</label> <input type="text" name="Club" id="Club" value="<?php echo $_POST['club_team']; ?>" size="25" maxlength="70"/><br />
               <label for="description">Description :</label><textarea name="description" id="description" rows="10" cols="50"><?php echo  $_POST['description_team']; ?></textarea><br />
-             
+           </div>  
          <input  name="nom_team" type="hidden"  value="<?php echo $_POST['nom_team']; ?>" >
  			<input  name="description_team" type="hidden"  value="<?php echo $_POST['description_team']; ?>" >
  			<input  name="ville_team" type="hidden"  value="<?php echo  $_POST['ville_team']; ?>" >
  			<input  name="sport_team" type="hidden"  value="<?php echo  $_POST['sport_team']; ?>" >
  			<input  name="club_team" type="hidden"  value="<?php echo  $_POST['club_team']; ?>" >
-      
- 			
+            <input  name="club_team" type="hidden"  value="<?php echo  $_POST['club_team']; ?>" >
+ 			<input  name="nbmembres" type="hidden"  value="<?php echo  $_POST['nbmembres']; ?>" >
  			<div class="spacearound"><h3><button type=submit class="decox"> Modifier</button></h3></div></form>
- 			 </form>
-             </div>  
-        </form>
+ 			 
+            
     <footer >
     	<?php include("Barrer.php"); ?>
     </footer>

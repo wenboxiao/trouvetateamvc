@@ -14,10 +14,15 @@ catch(Exception $e)
 $req = $bddu->prepare('SELECT * FROM groupes WHERE id_sport = ?');
 $req->execute(array($_GET['id_sport']));
 
-
+$req = $bddu->prepare('SELECT id_utilisateur FROM utilisateurs WHERE NomUtilisateur = ?');
+$req->execute(array($_SESSION['tttpseudo']));
+if($do = $req->fetch()){
+	$pseudo=$do['id_utilisateur'];
+	$req->closeCursor();}
 
 	while ($donnees = $req->fetch() ){
 		$GET_['nomgroupe']=$donnees['nomgroupe'];
+		$idgroupe=$donnees['id_groupe'];
 		$Ville=$donnees['ville_id'];
 		$Club=$donnees['id_club'];
 		$admin=$donnees['id_utilisateur'];
@@ -50,7 +55,13 @@ $req->execute(array($_GET['id_sport']));
              'Administrateur:     '.$_GET['admin'].'</br>'.
 		     'Description:     '.$_GET['description'].'</br>'.
 		     'Nombre de membres:     '.$_GET['nbmembre'].'</br>'.
-		     '<a  href="recherche_inscription.php"><input type="submit"  value="Rejoindre!"  class=titrebleu2 ></a>'.'</br>'.'</br>'.'</br>';
+		     '<form method="post"  action="recherche_inscription_public.php">
+ 			<input  name="Groupe" type="hidden"  value="'.$idgroupe.'" >
+ 			<input  name="Utilisateur" type="hidden"  value="'.$pseudo.'" >
+ 	
+ 			<input  name="Nbmembres" type="hidden"  value="'.$_GET['nbmembre'].'" >
+ 			
+ 					<button type="submit">Rejoindre!</button></form>'.'</br>';
 
 	}
 	$req->closeCursor();

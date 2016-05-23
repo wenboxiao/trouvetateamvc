@@ -3,10 +3,11 @@
 
 $bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
 
-$req = $bdd->prepare('SELECT id_groupe FROM groupes WHERE nomgroupe = ?');
+$req = $bdd->prepare('SELECT * FROM groupes WHERE nomgroupe = ?');
 $req->execute(array($_POST['nom_team']));
 if($do = $req->fetch()){
 	$idgroupe=$do['id_groupe'];
+	$nbmembre=$do['nombremembres'];
 	$req->closeCursor();}
 	
 	if ((isset($_POST['Nom'])) ) {
@@ -16,6 +17,8 @@ if($do = $req->fetch()){
 		if($donne = $reqa->fetch()){
 			$req->closeCursor();
 			if($_POST['Nom'] != $_POST['nom_team']){
+				
+				
 		include("groupe_profil_modif1.php");}
 			
 		}
@@ -53,6 +56,8 @@ if($do = $req->fetch()){
 			
 		else{
 			$req->closeCursor();
+			
+			
 			include("groupe_profil_modif2.php");}
 	
 	}
@@ -76,6 +81,8 @@ if($do = $req->fetch()){
 			
 			else{
 				$req->closeCursor();
+				
+		
 				include("groupe_profil_modif3.php");}
 		
 		}
@@ -99,6 +106,8 @@ if($do = $req->fetch()){
 				
 			else{
 				$req->closeCursor();
+				
+				
 				include("groupe_profil_modif4.php");}
 		
 		}
@@ -118,14 +127,7 @@ if($do = $req->fetch()){
 			));
 			$requ->closeCursor();
 	}
-echo '<form method="post"  action="groupe_profil.php">
- 			
- 			<input  name="nom_team" type="hidden"  value="'.$_POST['nom_team'].'" >
- 			<input  name="description_team" type="hidden"  value="'.$_POST['nom_team'].'" >
- 			<input  name="ville_team" type="hidden"  value="'.$_POST['nom_team'].'" >
- 			<input  name="sport_team" type="hidden"  value="'.$_POST['nom_team'].'" >
- 			<input  name="club_team" type="hidden"  value="'.$_POST['nom_team'].'" >';
-	
+
 	include("groupe_profil_modif5.php");
 		
 ?>

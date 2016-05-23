@@ -54,7 +54,7 @@
 							}}
 										
 									
-									$req = $bdd->prepare('INSERT INTO groupes(nomgroupe, descriptiongroupe, id_sport, id_club, ville_id, nombremembres, id_utilisateur) VALUES(:nomgroupe, :descriptiongroupe, :id_sport, :id_club, :ville_id, 0, :id_utilisateur)');
+									$req = $bdd->prepare('INSERT INTO groupes(nomgroupe, descriptiongroupe, id_sport, id_club, ville_id, nombremembres, id_utilisateur) VALUES(:nomgroupe, :descriptiongroupe, :id_sport, :id_club, :ville_id, 1, :id_utilisateur)');
 									$req->execute(array(
 									'nomgroupe' => $_POST['Nom_team'],
 								    'descriptiongroupe' => $_POST['description'],
