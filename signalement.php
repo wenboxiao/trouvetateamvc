@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php session_start(); ?>
 <?php 
 
@@ -33,6 +34,8 @@ else {
 	include("back_office_traitement.php");
 }
 =======
+=======
+>>>>>>> origin/master
 
 <?php session_start(); ?>
 <?php 
@@ -67,5 +70,8 @@ else {
 	$req1->closeCursor();
 	include("signalement_termine.php");
 }
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 ?>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -19,6 +20,8 @@
         <?php include("Barrer.php"); ?>
     </body>
 =======
+=======
+>>>>>>> origin/master
 <!DOCTYPE html>
 <html>
 
@@ -43,5 +46,8 @@
         </div>
         <?php include("Barrer.php"); ?>
     </body>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 </html>

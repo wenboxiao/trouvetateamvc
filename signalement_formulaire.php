@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <hmtl>
 	<head>
@@ -58,6 +59,8 @@
 			?>
 			<h1 class="boutonp3"><input type="submit" value="Envoyer"  class="bouton3"></h1>
 =======
+=======
+>>>>>>> origin/master
 <?php session_start(); ?>
 
 <!DOCTYPE html>
@@ -124,5 +127,8 @@
 				');
 			?>
 			<h1 class="boutonp3"><input type="submit" value="Envoyer"  class="bouton3"></h1>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 	</body>
