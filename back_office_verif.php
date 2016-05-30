@@ -3,10 +3,10 @@ $verification="";
 // On verifie la connexion de l'utilisateur
 if ((isset($_SESSION['tttpseudo']))&&(isset($_SESSION['tttpass']))) {
 	try {
-	$bddx = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', ''); 
+		$bddx = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', ''); 
 	}
 	catch(Exception $e) {
-	die('Erreur : '.$e->getMessage()); 
+		die('Erreur : '.$e->getMessage()); 
 	}
 
 	$reqx = $bddx->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ?');

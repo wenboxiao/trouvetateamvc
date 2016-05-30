@@ -55,14 +55,40 @@
                 </li>
         
                 <li>
-                        <a href="#">Aide</a>
-                        <ul>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Nous contacter</a></li>
-                        </ul>
+                    <a href="#">Aide</a>
+                    <ul>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                    </ul>
                 </li>
-        
+                
+                <?php
+                    try {
+                        $bddc = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', ''); 
+                    }
+                    catch(Exception $e) {
+                        die('Erreur : '.$e->getMessage()); 
+                    }
+
+                    $reqc = $bddc->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ?');
+                    $reqc->execute(array($_SESSION['tttpseudo']));
+                    if ($donnees = $reqc->fetch() ){
+                        $Droits=$donnees['DroitAdmin'];  
+                    }
+
+                    if(($Droits==1)||($Droits==2)) {
+                       echo '<li>
+                                <a href="#">Arrière-Boutique</a>
+                                <ul>
+                                    <li><a href="back_office_recherche_utilisateur.php">Gérer des utilisateurs</a></li>
+                                    <li><a href="#">Modifier la charte</a></li>
+                                    <li><a href="#">Editer la FAQ</a></li>
+                                </ul>
+                            </li>' ;
+                    }
+                
+                ?>
             </ul>
         </nav>
     <div class="coin">
