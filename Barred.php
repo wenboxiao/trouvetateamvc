@@ -68,8 +68,8 @@
 
     <div class="coin">
         <div class="boutonp">
-            <h3><a href="Connexion.php" class="bouton">Connexion</a></h3>
-            <h3><a href="Inscription.php" class="bouton">Inscription</a></h3>
+            <h3><a href="Connexion.php" class="styled-button-9">Connexion</a></h3>
+            <h3><a href="Inscription.php" class="styled-button-9">Inscription</a></h3>
         </div>
         <div class="barrep"></div>
     </div>

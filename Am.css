@@ -1,4 +1,4 @@
-
+﻿
 .menu, .menu ul /* Liste */     
 {
         padding : 0; /* pas de marge intérieure */
@@ -92,7 +92,8 @@
     display: flex ;
     justify-content: center;
     align-items: flex-end;
-    height: 157px;
+    height: 212px;
+    background-image: url("image/LOGON222.jpg");
 }
 
 .menub, .menub ul /* Liste */     

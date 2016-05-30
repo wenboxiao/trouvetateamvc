@@ -1,9 +1,9 @@
-.menu, .menu ul /* Liste */     
+﻿.menu, .menu ul /* Liste */     
 {
         padding : 0; /* pas de marge intérieure */
         margin : 0; /* ni extérieure */
         list-style : none; /* on supprime le style par défaut de la liste */
-        line-height : 27px; /* on définit une hauteur pour chaque élément */
+        line-height : 17px; /* on définit une hauteur pour chaque élément */
         text-align : center; /* on centre le texte qui se trouve dans la liste */
 }
 
@@ -64,7 +64,7 @@
 { 
         border-top: 0px solid rgb(35,37,122); /* on met une bordure blanche en haut de chaque élément d'une sous-liste */
         position: absolute; /* Position absolue */
-        width: 144px; /* Largeur des sous-listes */
+        width: 14px; /* Largeur des sous-listes */
         left: -999em; /* Hop, on envoie loin du champ de vision */
         
 }
@@ -74,7 +74,7 @@
 {
         background-color:rgb(85,185,244);
         border-top: 1px solid rgb(35,37,122);
-        height: 40px;
+        height: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -92,6 +92,7 @@
     justify-content: center;
     align-items: flex-end;
     height: 157px;
+    background-image: url("image/LOGON222.jpg");
 }
 
 .menub, .menub ul /* Liste */     
@@ -149,7 +150,7 @@
 .menub li ul /* Sous-listes */
 { 
         position: absolute; /* Position absolue */
-        width: 144px; /* Largeur des sous-listes */
+        width: 10px; /* Largeur des sous-listes */
         left: -999em; /* Hop, on envoie loin du champ de vision */
         
 }
@@ -159,7 +160,7 @@
 {
         background-color:rgb(85,185,244);
         border-top: 1px solid rgb(35,37,122);
-        height: 40px;
+        height: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -175,5 +176,5 @@
 {
     display: flex ;
     justify-content: flex-start;
-    height: 157px;
+    height: 107px;
 }
