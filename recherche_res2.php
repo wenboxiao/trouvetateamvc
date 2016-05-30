@@ -6,7 +6,7 @@ try
 }
 catch(Exception $e)
 {
-	die('Erreur : '.$e->getMessage());
+	die('Erreur : '.$e->getMessage());}
 	
 if ((isset($_SESSION['tttpseudo'])==false)&&(isset($_SESSION['tttpass'])==false)) {
 	
@@ -20,7 +20,7 @@ $req->execute(array($_SESSION['tttpseudo']));
 if($do = $req->fetch()){
 	$pseudo=$do['id_utilisateur'];
 	$req->closeCursor();}
-}}
+}
 $req = $bddu->prepare('SELECT * FROM groupes WHERE ville_id = ? AND id_sport = ?');
 $req->execute(array($_GET['ville_id'], $_GET['id_sport'] ));
 	

@@ -81,7 +81,6 @@ else{
  			<input  name="Utilisateur" type="hidden"  value="'.$pseudo.'" >
  		 	<input  name="Nbmembres" type="hidden"  value="'.$_GET['nbmembre'].'" >
  					<button type="submit">Rejoindre!</button></form>'.'</br>'.
-
  			// BOUTON DE SIGNALEMENT
  			'<form method="post" action="signalement_formulaire.php">
  			<input  name="id_objet" type="hidden"  value="'.$id_groupe.'" >
