@@ -42,7 +42,8 @@
 		}
 		?>
 		<form method="post" action="signalement.php">
-			<label for="tttpseudo" class="titrerouge2"> Signaler un contenu inaproprié </label> <br /><h1>
+			<div class="space"></div>
+			<label for="tttpseudo" class="titrerouge"> Signaler un contenu inaproprié </label> <br /><h1>
 			<p class="textebleu"> 
 			Vous signalez <?php echo($type); ?> nommé <?php echo($_POST['nom_objet']); ?> <br/>
 			Nous vous remercions de prendre le temps d'aider au bon fonctionnement du site <br/>
