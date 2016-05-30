@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <hmtl>
 	<head>
@@ -10,7 +12,12 @@
 
 	
 	<body>
-		<?php include("Barred.php");?>
+		<?php 
+	      if ((!isset($_SESSION['tttpseudo']))&&(!isset($_SESSION['tttpass']))) {
+	          include("Barred.php"); }
+	      else {
+	          include("Barrec.php"); }
+    	?>
 		<div class="spaceplus"></div>
 		<?php 
 		switch($_POST['type_objet']) {

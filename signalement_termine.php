@@ -9,7 +9,12 @@
         <title>Trouve ta Team</title>
     </head>
     <body>
-    	<?php include("Barred.php"); ?>
+        <?php 
+          if ((!isset($_SESSION['tttpseudo']))&&(!isset($_SESSION['tttpass']))) {
+              include("Barred.php"); }
+          else {
+              include("Barrec.php"); }
+        ?>
         <p class="centrer"> Votre requête a bien été envoyée à l'administrateur, qui l'examinera <br/>
         </p>
         <div class="boutonp">
