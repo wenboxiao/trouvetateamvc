@@ -1,3 +1,4 @@
+
 <?php session_start(); ?>
 <?php 
 
@@ -10,7 +11,7 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 
-if ((!isset($_SESSION['tttpseudo']))&&(!isset($_SESSION['tttpass']))) {
+if (!isset($_SESSION['tttpseudo'])) {
 	include("Connexion.php");
 }
 else {
@@ -29,6 +30,6 @@ else {
 						'id_objet' => $_POST['id_objet']
 						));
 	$req1->closeCursor();
-	include("back_office_traitement.php");
+	include("signalement_termine.php");
 }
 ?>
