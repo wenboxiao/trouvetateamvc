@@ -19,7 +19,7 @@
 			if($donnees = $req->fetch()){
 				if ($_POST['tttpass']==$donnees['MotDePass']) {
 					$_SESSION['tttpseudo']=$_POST['tttpseudo'];
-        			$_SESSION['tttpass']=$_POST['tttpass'];
+        			$_SESSION['tttpass']=1;
 					$req->closeCursor();
 					header('Location: Profild.php');
         			}
