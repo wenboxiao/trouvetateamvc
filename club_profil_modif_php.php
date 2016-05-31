@@ -44,7 +44,7 @@ if($do = $req->fetch()){
 			$sport =$donne['id_sport'];
 			$reqa->closeCursor();
 	
-			$requ = $bdd->prepare('UPDATE clubs SET id_sport = :nv_sport WHERE id_club = :idclub');
+			$requ = $bdd->prepare('UPDATE sport_du_club SET id_sport = :nv_sport WHERE id_club = :idclub');
 			$requ->execute(array(
 					'nv_sport' => $sport,
 					'idclub' => $idclub,

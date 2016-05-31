@@ -64,9 +64,17 @@
 									
 									'id_utilisateur' => $admin_groupe,
 									));
+									$reqc = $bdd->prepare('SELECT * FROM groupes WHERE nomgroupe = ?');
+									$reqc->execute(array($_POST['Nom_team']));
+									if($d = $reqc->fetch()){
+										$id_groupe=$d['id_groupe'];
+										$reqc->closeCursor();}
+									
+									$req = $bdd->prepare('INSERT INTO appartenance_a_un_groupe(id_utilisateur, id_groupe, statut) VALUES(:admin, :id_groupe, 1)');
+									$req->execute(array(
+											'admin' => $admin_groupe,
+											'id_groupe' => $id_groupe));
 									$req->closeCursor();
-								
-							
 									include("groupe_bienvenue.php");
 							
 									
