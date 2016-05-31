@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -12,13 +12,8 @@
 <body>
      <?php 
 
-if ((isset($_SESSION['tttpseudo'])==false)&&(isset($_SESSION['tttpass'])==false)) {
-    include("Barred.php");
-}
-else
-{
     include("Barrec.php");
-}
+
 ?>
         <section>
           <div class="centrerco">
