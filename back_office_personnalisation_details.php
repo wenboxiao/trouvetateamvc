@@ -10,18 +10,25 @@
 	}
 	
 	// Si on a modifié les droits d'admin
+
 	if(isset($_POST['choix_privilege'])) {
-		$reqa = $bddu ->prepare('UPDATE utilisateurs SET DroitAdmin = ? WHERE id_utilisateur = ?');
-		$reqa ->execute(array(	$_POST['choix_privilege'],
-								$_POST['id_utilisateur']
-								));
-		// Et si l'admin à passé son rôle à quelqun d'autre, il le perd et devient modérateur
-		if($_POST['choix_privilege']==2) {
-			$reqa ->execute(array(	1,
-									$_POST['id_decideur']
+		// On verifie que les droits d'admin ne sont pas donné à un banni
+		if(($_POST['choix_privilege']!=2) OR ($_POST['choix_ban']!=1)) {
+			$reqa = $bddu ->prepare('UPDATE utilisateurs SET DroitAdmin = ? WHERE id_utilisateur = ?');
+			$reqa ->execute(array(	$_POST['choix_privilege'],
+									$_POST['id_utilisateur']
 									));
+			// Et si l'admin à passé son rôle à quelqun d'autre, il le perd et devient modérateur
+			if($_POST['choix_privilege']==2) {
+				$reqa ->execute(array(	1,
+										$_POST['id_decideur']
+										));
+			}
+			$reqa->closeCursor();
 		}
-		$reqa->closeCursor();
+		else {
+			$pasDAminBanni=1;
+		}
 	}
 	
 	// Si on a modifié le bannissement
@@ -82,7 +89,7 @@
 	}
 
 	echo '<div class="space"></div><h2 class="titrevert"> Détails Utilisateur</h3>'.
-		'<p class="textebleu2">'.
+		'<p class="centrerco">'.
 		'Utilisateur :     '.$NomUtilisateur.'</br>'.
 		'Prenom :     '.$Prenom.'</br>'.
 		'Nom :     '.$Nom.'</br>'.
@@ -92,23 +99,26 @@
 	
 	if($Pouvoir>$Privilege) {
 		echo'<p>
-			<form method="post"  action="back_office_detail_utilisateur.php">
+			<form method="post"  action="back_office_detail_utilisateur.php" class="titrevert">
 				<select name="choix_ban" id="choix_ban">
 					<option value=1 '.$optionA.'> Utilisateur Banni </option>
 					<option value=0 '.$optionB.'> Utilisateur non Banni </option>
 				</select> ';
-		if($Pouvoir==2) {
+		if ($Pouvoir==2) {
 		echo	'<select name="choix_privilege" id="choix_privilege">
 					<option value=0 '.$option1.'> Utilisateur </option>
 					<option value=1 '.$option2.'> Modérateur </option>
 					<option value=2 '.$option3.'> Administrateur </option>
 				</select>
-				<input  name="id_decideur" type="hidden"  value="'.$id_decideur.'"> ';
+				<input  name="id_decideur" type="hidden"  value="'.$id_decideur.'">';
 		}
 		echo	'<input  name="id_utilisateur" type="hidden"  value="'.$_POST['id_utilisateur'].'">
 				<button type="submit">Modifier</button>
 			</form>'.'</br>'.
 			'</p>';
+		if(isset($pasDAminBanni)) {
+			echo '<p class="titrerouge"> Ne bannissez un utilisateur à qui vous donnez les droits d\'admin!</p>';
+		}
 	}
 	
 
