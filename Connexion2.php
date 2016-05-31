@@ -14,7 +14,7 @@
         <form method="post" action="Pass.php">
                 <label for="pseudo" class="titrevert2">Votre pseudo :</label><br />
                 <div class="pss"><input type="text" name="tttpseudo" id="tttpseudo" class="tttpseudo" placeholder="Ex: Gladolferat" size="30" maxlength="30" /></div><br />
-                <h4 class="titrerouge">Le mot de passe et le pseudo ne correspondent pas</h4>
+                <h4 class="titrerouge">Veuillez remplir les champs</h4>
                 <label for="pass" class="titrevert2">Votre mot de passe :</label><br />
                 <div class="pss"><input type="password" name="tttpass" id="tttpass" placeholder="Ex: CaputDrackonis" size="30" maxlength="30"/></div><br />
                 <h1 class="boutonp3"><input type="submit" value="Connexion"  class="bouton3"></h1>
