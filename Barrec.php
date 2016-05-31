@@ -83,7 +83,7 @@
                                 <ul>
                                     <li><a href="back_office_recherche_utilisateur.php">Gérer des utilisateurs</a></li>
                                     <li><a href="#">Modifier la charte</a></li>
-                                    <li><a href="#">Editer la FAQ</a></li>
+                                    <li><a href="back_office_faq.php">Editer la FAQ</a></li>
                                 </ul>
                             </li>' ;
                     }

@@ -1,5 +1,5 @@
 <?php session_start(); ?>    
-<?php include("back_office_verif.php") ?>
+<?php include("back_office_verif.php"); ?>
 <!DOCTYPE html>
 <html>
  	<head>
