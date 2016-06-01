@@ -61,10 +61,37 @@
                             <a href="#">Aide</a>
                             <ul>
                                 <li><a href="#">Forum</a></li>
-                                <li><a href="#">FAQ</a></li>
+                                <li><a href="FAQ.php">FAQ</a></li>
                                 <li><a href="#">Nous contacter</a></li>
                             </ul>
                     </li>
+                    <?php
+
+                    try {
+                        $bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', ''); 
+                    }
+                    catch(Exception $e) {
+                        die('Erreur : '.$e->getMessage()); 
+                    }
+
+                    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ?');
+                    $req->execute(array($_SESSION['tttpseudo']));
+                    if ($donnees = $req->fetch() ){
+                        $Droits=$donnees['DroitAdmin'];  
+                    }
+                    if(($Droits==1)||($Droits==2)) {
+                        echo '<li>
+                                    <a href="#">Arrière Boutique</a>
+                                    <ul>
+                                        <li><a href="back_office_recherche_utilisateur.php">Modérer des utilisateurs</a></li>
+                                        <li><a href="back_office_faq.php">Editer la FAQ</a></li>
+                                        <li><a href="#">Editer le site</a></li>
+                                        <li><a href="#">Consulter les signalement d\'abus</a></li>
+                                    </ul>
+                            </li>
+                            ';
+                    }
+                    ?>
                     <li>
                             <a href="#">Mon Compte</a>
                             <ul>
