@@ -1,4 +1,4 @@
-﻿
+
 .menu, .menu ul /* Liste */     
 {
         padding : 0; /* pas de marge intérieure */
@@ -11,15 +11,16 @@
 .menu /* Ensemble du menu */
 {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
-        background-color: rgb(0,118,174);
         text-decoration: none;
         color: white;
         font-size: 20px;
-        width: 945px;
-        height: 55px;
+        width: 100%;
+        height: 45px;
         border-radius: 60px 0px 0px 0px;
+        padding-left: 12%;
+        padding-bottom: 5px;
 }
 
 .menu a /* Contenu des listes */
@@ -29,7 +30,7 @@
         color : #fff; /* couleur du texte */
         text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
         width : 168px; /* largeur */
-        height: 55px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -40,7 +41,7 @@
 }
 .menu li ul li:hover
 {
-        background : green; /* couleur de fond */        
+        background : #06FF01; /* couleur de fond */        
         color :#fff ;
         display: flex;
         justify-content: center;
@@ -92,8 +93,7 @@
     display: flex ;
     justify-content: center;
     align-items: flex-end;
-    height: 212px;
-    background-image: url("image/LOGON222.jpg");
+    height: 157px;
 }
 
 .menub, .menub ul /* Liste */     
@@ -108,13 +108,16 @@
 .menub /* Ensemble du menu */
 {
         display: flex;
-        justify-content: flex-start;
-        align-items: centre;
-        background-color: rgb(0,118,174);
+        justify-content: left;
+        align-items: center;
         text-decoration: none;
         color: white;
         font-size: 20px;
-        height: 55px;
+        width: 100%;
+        height: 45px;
+        border-radius: 60px 0px 0px 0px;
+        padding-left: 5%;
+        padding-bottom: 5px;
 }
 
 .menub a /* Contenu des listes */
@@ -124,7 +127,7 @@
         color : #fff; /* couleur du texte */
         text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
         width : 168px; /* largeur */
-        height: 55px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
