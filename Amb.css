@@ -40,7 +40,7 @@
 }
 .menu li ul li:hover
 {
-        background : green; /* couleur de fond */        
+        background : #01EB2B; /* couleur de fond */        
         color :#fff ;
         display: flex;
         justify-content: center;
@@ -112,10 +112,10 @@
         text-decoration: none;
         color: white;
         font-size: 20px;
-        width: 100%;
+        width: 80%;
         height: 45px;
         border-radius: 60px 0px 0px 0px;
-        padding-left: 5%;
+        padding-left: 3%;
         padding-bottom: 5px;
 }
 
@@ -131,13 +131,10 @@
         justify-content: center;
         align-items: center;
 }
-.menub a:hover
-{
 
-}
 .menub li ul li:hover
 {
-        background : #06FF01; /* couleur de fond */        
+        background : #01EB2B; /* couleur de fond */        
         color :#fff ;
         display: flex;
         justify-content: center;

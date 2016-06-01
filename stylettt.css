@@ -7,6 +7,15 @@ color: rgb(0,118,174);
 .red{
 color: rgb(233,7,13,1);
 }
+.decox{
+	color: white;
+}
+.salut{
+	color: white;
+}
+.pseudo{
+	color:#01EB2B;
+}
 .profil{
 	display: flex;
     flex-direction: column;
@@ -76,27 +85,13 @@ color: rgb(233,7,13,1);
 	justify-content: space-between;
 	text-decoration: none;
 	color: white ;
-	height: 21px;
-    border: 8px rgb(0,153,204) outset;
-    min-width: 80px
+	width: 78px;
+	height: 23px;
+	border-bottom: solid 4px;
+	border-bottom-color: rgb(1,12,21);
+	padding-top: 5px;
+	border-radius: 0px 0px 3px 3px;
 }
-.bouton2:visited
-{
-	background-color: rgb(16,166,97);
-	display: flex;
-	justify-content: space-between;
-	text-decoration: none;
-	color: white ;
-	height: 21px;
-    border: 8px rgb(15,157,88) outset;
-   	min-width: 80px
-}
-.bouton2:visited:hover
-{
-	height: 21px;
-    border: 8px rgb(16,166,97)solid;
-}
-
 .puce
 {	border-radius: 120px 0px 0px 0px;
 	flex:20;
@@ -119,16 +114,9 @@ color: rgb(233,7,13,1);
 	color: white;
 	font-size: 20px;
 }
-.lien:hover{
-	text-decoration: underline;
-}
-
 .decox{
 	text-decoration: none;
 	color:rgb(0,118,174);
-}
-.decox:hover{
-	color: rgb(0,176,80);
 }
 .titrevert{
 	color:rgb(0,176,80);

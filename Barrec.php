@@ -5,9 +5,9 @@
     <div class="right_head">
             <div class="zone_insription_et_connexion">
                 <div class="boutonpc">
-                <h3 class="blue">Salut</h3><div class="px"></div><h3 class="green"><?php echo $_SESSION['tttpseudo'];?></h3>
+                <h3 class="salut">Salut</h3><div class="px"></div><h3 class="pseudo"><?php echo $_SESSION['tttpseudo'];?></h3>
                 </div>
-                <h3><a href="Deconnexion.php" class="decox"> Déconnexion </a></h3>
+                <h3 class="decox"><a href="Deconnexion.php" > Déconnexion </a></h3>
             </div>
         <div class="barre_de_navigation">
             <nav id="barre2">
