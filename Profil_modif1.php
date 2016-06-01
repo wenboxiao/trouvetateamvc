@@ -19,8 +19,7 @@
               <label for="Ville">Ville :</label> <input type="text" name="Ville" id="Ville" value="<?php echo  $_SESSION['tttville']; ?>" size="25" /><br />
                <h4 class="titrerouge">La ville n'est pas reconnu</h4><br />
               <label for="Mail">E-mail :</label> <input type="email" name="Mail" id="Mail" value="<?php echo  $_SESSION['tttmail']; ?>" size="25" maxlength="70"/><br />
-              <label for="Pass">Mot de Passe :</label><input type="password" name="Pass" id="Pass" value="<?php echo  $_SESSION['tttpass']; ?>" size="25" maxlength="70"/><br />
-              <input type="password" name="Confi" id="Confi" placeholder="Confirmation" size="25" maxlength="70"/><br />
+              
               
              
           </div>

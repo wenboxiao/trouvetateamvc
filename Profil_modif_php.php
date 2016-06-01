@@ -33,23 +33,7 @@ if($do = $req->fetch()){
 		}
 	
 		
-		if ((isset($_POST['Pass'])) ) {
 		
-			
-			if ($_POST['Pass']!=$_POST['Confi']){
-				include("Profil_modif2.php");	}
-			
-		else{
-			$_SESSION['tttpass'] = $_POST['Pass'];
-			$requ = $bdd->prepare('UPDATE utilisateurs SET MotDePass = :nv_pass WHERE id_utilisateur = :pseudo');
-			$requ->execute(array(
-					'nv_pass' => $_POST['Pass'],
-					'pseudo' => $pseudo,
-			));
-			$requ->closeCursor();
-			}
-			
-		}
 
 
 if ((isset($_POST['Nom'])) ) {

@@ -16,8 +16,9 @@
                 <div class="pss"><input type="text" name="tttpseudo" id="tttpseudo" class="tttpseudo" placeholder="Ex: Gladolferat" size="30" maxlength="30" /></div><br />
                 <label for="tttpass" class="titrevert2">Votre mot de passe :</label><br />
                 <div class="pss"><input type="password" name="tttpass" id="tttpass" placeholder="Ex: CaputDrackonis" size="30" maxlength="30"/></div><br />
-                <h1 class="boutonp3"><input type="submit" value="Connexion"  class="bouton3"></h1>
-        </form>
+                <h1 class="boutonp3"><input type="submit" value="Connexion"  class="bouton3"></h1></form>
+                <a class="titrerouge" href="reinitialisation_mot_de_passe.php">*Mot de passe oublié ?</a><br/>
+        
         <?php include("Barrer.php"); ?>
     </body> 
 </html>
