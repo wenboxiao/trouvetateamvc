@@ -58,6 +58,7 @@
 		$Privilege=$donnees['DroitAdmin'];
 		$isBanned=$donnees['is_banned'];
 	}
+	$req->closeCursor();
 
 	// Preparation de modification de privilège
 	$optionA="";
@@ -112,10 +113,25 @@
 				</select>
 				<input  name="id_decideur" type="hidden"  value="'.$id_decideur.'">';
 		}
-		echo	'<input  name="id_utilisateur" type="hidden"  value="'.$_POST['id_utilisateur'].'">
-				<button type="submit">Modifier</button>
-			</form>'.'</br>'.
+		echo	'<input  name="id_utilisateur" type="hidden"  value="'.$_POST['id_utilisateur'].'">';
+
+		if (isset($_POST['id_signalement_concerne'])) {
+			echo '<input name="id_signalement_concerne" type="hidden" value="'.$_POST['id_signalement_concerne'].'">';
+		}
+
+		echo '	<button type="submit">Modifier</button>
+			</form></br>'.
 			'</p>';
+
+		if (isset($_POST['id_signalement_concerne'])) {
+			echo '<FROM method="post" action="back_office_signal_details.php">
+					<input name="id_signalement_details" type="hidden" value="'.$_POST['id_signalement_concerne'].'">
+					<button type="submit">Retour au message de signalement</button>
+				</form> <br/>';
+		}
+		else {
+			
+		}
 		if(isset($pasDAminBanni)) {
 			echo '<p class="titrerouge"> Ne bannissez un utilisateur à qui vous donnez les droits d\'admin!</p>';
 		}
