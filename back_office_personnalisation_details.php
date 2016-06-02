@@ -124,13 +124,15 @@
 			'</p>';
 
 		if (isset($_POST['id_signalement_concerne'])) {
-			echo '<FROM method="post" action="back_office_signal_details.php">
+			echo '<form method="post" action="back_office_signal_details.php">
 					<input name="id_signalement_details" type="hidden" value="'.$_POST['id_signalement_concerne'].'">
 					<button type="submit">Retour au message de signalement</button>
 				</form> <br/>';
 		}
 		else {
-			
+			echo '<form method="post" action="back_office_recherche_utilisateur.php">
+					<button type="submit">Retour à la recherche</button>
+				</form> <br/>';
 		}
 		if(isset($pasDAminBanni)) {
 			echo '<p class="titrerouge"> Ne bannissez un utilisateur à qui vous donnez les droits d\'admin!</p>';

@@ -86,7 +86,7 @@
                                         <li><a href="back_office_recherche_utilisateur.php">Modérer des utilisateurs</a></li>
                                         <li><a href="back_office_faq.php">Editer la FAQ</a></li>
                                         <li><a href="#">Editer le site</a></li>
-                                        <li><a href="#">Consulter les signalement d\'abus</a></li>
+                                        <li><a href="back_office_signal_apercu.php">Consulter les signalement d\'abus</a></li>
                                     </ul>
                             </li>
                             ';
