@@ -92,15 +92,15 @@ if ($donnees = $reqt->fetch() ){
 			break;
 	}
 
-    echo 'Signalement émis par : '.$prenom_delateur.' '.$nom_delateur.'
-    	<form method="post" action="back_office_detail_utilisateur.php">
+    echo '<form method="post" action="back_office_detail_utilisateur.php">
+    		Signalement émis par : '.$prenom_delateur.' '.$nom_delateur.'
     		<input name="id_utilisateur" type="hidden" value="'.$id_delateur.'">
     		<input name="id_signalement_concerne" type="hidden" value="'.$donnees['id_signalement'].'">
     		<button type="submit">Voir</button>
     	</form> <br/> 
     	A propos '.$type.' : '.$nomobjet.'<br/>
-    	L\'utilisateur qui en est responsable est : '.$prenom_utilisateur_denonce.' '.$nom_utilisateur_denonce.'
     	<form method="post" action="back_office_detail_utilisateur.php">
+    		L\'utilisateur qui en est responsable est : '.$prenom_utilisateur_denonce.' '.$nom_utilisateur_denonce.'
     		<input name="id_utilisateur" type="hidden" value="'.$id_utilisateur_denonce.'">
     		<input name="id_signalement_concerne" type="hidden" value="'.$donnees['id_signalement'].'">
     		<button type="submit">Voir</button>
