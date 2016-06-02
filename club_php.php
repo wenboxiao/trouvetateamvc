@@ -10,7 +10,7 @@
 	}
 	else{
 		if ((isset($_POST['id_club'])) AND(isset($_POST['Sport']))AND (isset($_POST['Ville']))AND (isset($_POST['Nom_club']))AND (isset($_POST['Mail']))) {
-			$bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+			include('TTT_BDD.php');
 			
 			$requ = $bdd->prepare('SELECT id_utilisateur FROM utilisateurs WHERE NomUtilisateur = ?');
 			$requ->execute(array($_SESSION['tttpseudo']));

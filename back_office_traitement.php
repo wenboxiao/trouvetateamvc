@@ -2,14 +2,14 @@
 <?php
 try
 {
-	$bddy = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+	include('TTT_BDD.php');
 }
 catch(Exception $e)
 {
 	die('Erreur : '.$e->getMessage());
 }
 
-$req = $bddy->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ? OR Prenom = ? OR Nom = ?');
+$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ? OR Prenom = ? OR Nom = ?');
 $req->execute(array($_POST['Utilisateur'],
 					$_POST['Utilisateur'],
 					$_POST['Utilisateur'],

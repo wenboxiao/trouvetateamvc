@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 <?php 	
 
-$bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '')
-;
+include('TTT_BDD.php');
+
 //===adresse mail de l'administrateur
 $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE DroitAdmin = ?');
 $req->execute(array(1));

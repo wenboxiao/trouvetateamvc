@@ -96,7 +96,7 @@
                             <a href="#">Mon Compte</a>
                             <ul>
                                 <li><a href="Profil.php">Mon Profil</a></li>
-                                <li><a href="#">Emploi du Temps</a></li>
+                                <li><a href="emploi_du_temps.php">Emploi du Temps</a></li>
                                 <li><a href="parametres_groupe_club.php">Parametres de mes Teams/Clubs</a></li>
                             </ul>
                     </li>

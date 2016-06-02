@@ -1,7 +1,7 @@
 <?php
 try
 {
-	$bddu = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+	include('TTT_BDD.php');
 }
 catch(Exception $e)
 {
@@ -14,13 +14,13 @@ if ((isset($_SESSION['tttpseudo'])==false)&&(isset($_SESSION['tttpass'])==false)
 else
 {
 	
-$req = $bddu->prepare('SELECT id_utilisateur FROM utilisateurs WHERE NomUtilisateur = ?');
+$req = $bdd->prepare('SELECT id_utilisateur FROM utilisateurs WHERE NomUtilisateur = ?');
 $req->execute(array($_SESSION['tttpseudo']));
 if($do = $req->fetch()){
 	$pseudo=$do['id_utilisateur'];
 	$req->closeCursor();}
 }
-$req = $bddu->prepare('SELECT * FROM groupes WHERE ville_id = ?');
+$req = $bdd->prepare('SELECT * FROM groupes WHERE ville_id = ?');
 $req->execute(array($_GET['ville_id']));
 	while ($donnees = $req->fetch() ){
 		$_GET['nomgroupe']=$donnees['nomgroupe'];
@@ -34,19 +34,19 @@ $req->execute(array($_GET['ville_id']));
 		$id_groupe=$donnees['id_groupe'];
 		$type_objet=2;
 		
-		$requ = $bddu->prepare('SELECT nomsport FROM sports WHERE id_sport = ?');
+		$requ = $bdd->prepare('SELECT nomsport FROM sports WHERE id_sport = ?');
 		$requ->execute(array($Sport));
 		if ($donnee = $requ->fetch()) {
 			$_GET['nomsport']=$donnee['nomsport'];}
 			$requ->closeCursor();
 			
-		$requo = $bddu->prepare('SELECT nomclub FROM clubs WHERE id_club = ?');
+		$requo = $bdd->prepare('SELECT nomclub FROM clubs WHERE id_club = ?');
 		$requo->execute(array($Club));
 		if ($donnee = $requo->fetch()) {
 			$_GET['nomclub']=$donnee['nomclub'];}
 			$requo->closeCursor();
 		
-			$requa = $bddu->prepare('SELECT NomUtilisateur FROM utilisateurs WHERE id_utilisateur = ?');
+			$requa = $bdd->prepare('SELECT NomUtilisateur FROM utilisateurs WHERE id_utilisateur = ?');
 			$requa->execute(array($admin));
 			if ($donnee = $requa->fetch()) {
 				$_GET['admin']=$donnee['NomUtilisateur'];}

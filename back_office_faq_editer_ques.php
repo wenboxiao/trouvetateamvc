@@ -2,7 +2,7 @@
 
 
 try {
-    $bddo = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+   include('TTT_BDD.php');
 }
 catch(Exception $e) {
     die('Erreur : '.$e->getMessage());
@@ -12,7 +12,7 @@ $question="";
 $reponse="";
 $id_question="new";
 if(isset($_POST['modification'])) {
-	$req = $bddo->prepare('SELECT * FROM faq WHERE id_question=?');
+	$req = $bdd->prepare('SELECT * FROM faq WHERE id_question=?');
 	$req -> execute(array($_POST['modification']));
 
 	if ($donnees = $req->fetch() ){

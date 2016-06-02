@@ -1,28 +1,28 @@
 <?php
 
 try {
-    $bddz = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+    include('TTT_BDD.php');
 }
 catch(Exception $e) {
     die('Erreur : '.$e->getMessage());
 }
 
 if(isset($_POST['suppression'])) {
-    $req = $bddz -> prepare('DELETE FROM faq WHERE id_question = ?');
+    $req = $bdd -> prepare('DELETE FROM faq WHERE id_question = ?');
     $req -> execute(array($_POST['suppression']));
     echo '<p class="titrerouge">La Question/Réponse a bien été supprimée de la base de données. </p>';
 }
 
 if(isset($_POST['edition'])) {
     if($_POST['edition']=="new") {
-        $req = $bddz -> prepare('INSERT INTO faq(question_theme, Texte) VALUES (?, ?)');
+        $req = $bdd -> prepare('INSERT INTO faq(question_theme, Texte) VALUES (?, ?)');
         $req -> execute(array($_POST['question'],
                             $_POST['reponse']
                                 ));
         echo '<p class="titrerouge">La Question/Réponse a bien été ajoutée à la base de données. </p>';
     }
     else {
-        $req = $bddz -> prepare('UPDATE faq SET question_theme = :question, Texte = :texte WHERE id_question = :id_question');
+        $req = $bdd -> prepare('UPDATE faq SET question_theme = :question, Texte = :texte WHERE id_question = :id_question');
         $req -> execute(array(
                 'question' => $_POST['question'],
                 'texte' => $_POST['reponse'],
@@ -38,7 +38,7 @@ echo '<p class="centrerco"> Vous pouvez ajouter une Question/Réponse en cliquan
     </form>
     </p>';
 
-$reqz = $bddz->query('SELECT * FROM faq');
+$reqz = $bdd->query('SELECT * FROM faq');
 while ($donnees = $reqz->fetch() ){
     $question=$donnees['question_theme'];
     $reponse=$donnees['Texte'];

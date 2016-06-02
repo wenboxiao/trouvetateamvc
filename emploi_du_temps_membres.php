@@ -3,13 +3,13 @@
 
    try
         {
-    $bddu = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+   include('TTT_BDD.php');
         }
     catch(Exception $e)
         {
     die('Erreur : '.$e->getMessage());
         }
-        $requ = $bddu->prepare('SELECT * FROM appartenance_a_un_groupe WHERE id_groupe = ?');
+        $requ = $bdd->prepare('SELECT * FROM appartenance_a_un_groupe WHERE id_groupe = ?');
         $requ->execute(array($_POST['id_groupe']));
     
 
@@ -19,7 +19,7 @@
  	$utilisateur=$donnees['id_utilisateur'];
  	
  	
- 	$reqi = $bddu->prepare('SELECT * FROM utilisateurs WHERE id_utilisateur = ?');
+ 	$reqi = $bdd->prepare('SELECT * FROM utilisateurs WHERE id_utilisateur = ?');
  	$reqi->execute(array($utilisateur));
  	
  	if ($donneesi = $reqi->fetch()) {
@@ -35,7 +35,7 @@
 
  	
  	
- 	$reqa = $bddu->prepare('SELECT * FROM villes_france_free WHERE ville_id = ?');
+ 	$reqa = $bdd->prepare('SELECT * FROM villes_france_free WHERE ville_id = ?');
  	$reqa->execute(array($donneesi['ville_id']));
  	
  	if ($donnees = $reqa->fetch()) {

@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php 	
 
-$bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+include('TTT_BDD.php');
 
 $req = $bdd->prepare('SELECT id_utilisateur FROM utilisateurs WHERE NomUtilisateur = ?');
 $req->execute(array($_SESSION['tttpseudo']));

@@ -10,7 +10,7 @@
 	}
 	else{
 		if ((isset($_POST['Pseudo'])) AND(isset($_POST['Pass']))AND (isset($_POST['Ville']))AND(isset($_POST['Confi']))AND(isset($_POST['Mail']))) {
-			$bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+			include('TTT_BDD.php');
 			
 			$reqo = $bdd->prepare('SELECT NomUtilisateur FROM utilisateurs WHERE NomUtilisateur = ?');
 			$reqo->execute(array($_POST['Pseudo']));

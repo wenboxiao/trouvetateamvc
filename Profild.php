@@ -2,14 +2,14 @@
  <?php
     try
         {
-    $bddu = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+   include('TTT_BDD.php');
         }
     catch(Exception $e)
         {
     die('Erreur : '.$e->getMessage());
         }
 
-    $requ = $bddu->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ?');
+    $requ = $bdd->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ?');
     $requ->execute(array($_SESSION['tttpseudo']));
 
 
@@ -26,7 +26,7 @@
     }
     $requ->closeCursor();
 
-    $reqi = $bddu->prepare('SELECT ville_nom_reel FROM villes_france_free WHERE ville_id = ?');
+    $reqi = $bdd->prepare('SELECT ville_nom_reel FROM villes_france_free WHERE ville_id = ?');
     $reqi->execute(array($ville_id));
 
     if ($donneesi = $reqi->fetch()) {

@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+include('TTT_BDD.php');
 
 $req = $bdd->prepare('SELECT * FROM appartenance_a_un_groupe WHERE id_groupe = ? AND id_utilisateur= ?');
 $req->execute(array($_POST['Groupe'],$_POST['Utilisateur']));

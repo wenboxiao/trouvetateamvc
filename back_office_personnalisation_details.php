@@ -2,7 +2,7 @@
 <?php
 	try
 	{
-		$bddu = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+		include('TTT_BDD.php');
 	}
 	catch(Exception $e)
 	{
@@ -14,7 +14,7 @@
 	if(isset($_POST['choix_privilege'])) {
 		// On verifie que les droits d'admin ne sont pas donné à un banni
 		if(($_POST['choix_privilege']!=2) OR ($_POST['choix_ban']!=1)) {
-			$reqa = $bddu ->prepare('UPDATE utilisateurs SET DroitAdmin = ? WHERE id_utilisateur = ?');
+			$reqa = $bdd ->prepare('UPDATE utilisateurs SET DroitAdmin = ? WHERE id_utilisateur = ?');
 			$reqa ->execute(array(	$_POST['choix_privilege'],
 									$_POST['id_utilisateur']
 									));
@@ -32,7 +32,7 @@
 	}
 	
 	// Si on a modifié le bannissement
-	$reqb = $bddu ->prepare('UPDATE utilisateurs SET is_banned = ? WHERE id_utilisateur = ?');
+	$reqb = $bdd ->prepare('UPDATE utilisateurs SET is_banned = ? WHERE id_utilisateur = ?');
 	if(isset($_POST['choix_ban'])) {
 		$reqb ->execute(array(	$_POST['choix_ban'],
 								$_POST['id_utilisateur']
@@ -40,7 +40,7 @@
 	}
 	$reqb->closeCursor();
 
-	$requ = $bddu->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ?');
+	$requ = $bdd->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ?');
 	$requ->execute(array($_SESSION['tttpseudo']));
 	if ($donnees = $requ->fetch() ){
 		$Pouvoir=$donnees['DroitAdmin'];
@@ -49,7 +49,7 @@
 	$requ->closeCursor();
 
 	
-	$req = $bddu->prepare('SELECT * FROM utilisateurs WHERE id_utilisateur = ?');
+	$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE id_utilisateur = ?');
 	$req->execute(array($_POST['id_utilisateur']));
 	if ($donnees = $req->fetch() ){
 		$Nom=$donnees['Nom'];

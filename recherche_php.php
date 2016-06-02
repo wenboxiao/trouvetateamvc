@@ -2,11 +2,11 @@
 <?php 	
 
 
-	
+include('TTT_BDD.php');
 	
 		if ((isset($_POST['Ville'])) AND ($_POST['Sport']=="")) {
 			
-			$bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+			
 			
 			$reqa = $bdd->prepare('SELECT * FROM villes_france_free WHERE ville_nom_reel = ?');
 						$reqa->execute(array($_POST['Ville']));	
@@ -26,7 +26,7 @@
 						
 	elseif (($_POST['Ville']=="") AND (isset($_POST['Sport']))) {
 								
-							$bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+							
 								
 							$reqa = $bdd->prepare('SELECT * FROM sports WHERE nomsport = ?');
 							$reqa->execute(array($_POST['Sport']));
@@ -46,7 +46,7 @@
 	
 	elseif ((isset($_POST['Ville'])) AND (isset($_POST['Sport']))) {
 	
-		$bdd = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+		
 	
 		$reqa = $bdd->prepare('SELECT * FROM sports WHERE nomsport = ?');
 		$reqa->execute(array($_POST['Sport']));

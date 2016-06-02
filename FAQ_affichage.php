@@ -1,13 +1,13 @@
 <?php
 
 try {
-    $bddz = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+   include('TTT_BDD.php');
 }
 catch(Exception $e) {
     die('Erreur : '.$e->getMessage());
 }
 
-$reqz = $bddz->query('SELECT * FROM faq');
+$reqz = $bdd->query('SELECT * FROM faq');
 while ($donnees = $reqz->fetch() ){
     $question=$donnees['question_theme'];
     $reponse=$donnees['Texte'];
