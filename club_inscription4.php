@@ -13,12 +13,12 @@
         <div class="space"></div>     
         <form method="post" action="club_php.php" class="centrerco">
           <div class="centrerco">
-          	<input type="text" name="id_club" id="id_club"  placeholder="*Immatriculation du club" size="25" /><br />
-          	<input type="text" name="Nom_club" id="Nom_club"  placeholder="*Nom du club" size="25" /><br />
-              <input type="text" name="Sport" id="Sport" placeholder="*Sport" size="25" /><br />
-              <input type="text" name="Ville" id="Ville" placeholder="*Ville" size="25"  /><br />
+          	<div><input type="text" name="id_club" id="id_club"  placeholder="*Immatriculation du club" size="25" />*</div><br />
+         <div><input type="text" name="Nom_club" id="Nom_club"  placeholder="*Nom du club" size="25" />*</div><br />
+         <div><input type="text" name="Sport" id="Sport" placeholder="*Sport" size="25" />*</div><br />
+         <div><input type="text" name="Ville" id="Ville" placeholder="*Ville" size="25"  />*</div><br />
+         <div><input type="email" name="Mail" id="Mail" placeholder="*E-Mail" size="25" maxlength="70"/>*</div><br />
               <input type="text" name="Adresse" id="Adresse" placeholder="Adresse" size="25" /><br />
-              <input type="email" name="Mail" id="Mail" placeholder="*E-Mail" size="25" maxlength="70"/><br />
               
 			<textarea name="description" id="description" rows="10" cols="50" placeholder="Description du club"/></textarea> <br />      
               <h4 class="titrerouge">Veuillez remplir les champs obligatoires *</h4><br />

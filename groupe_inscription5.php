@@ -13,9 +13,9 @@
         <div class="space"></div>     
         <form method="post" action="groupe_php.php" class="centrerco">
           <div class="centrerco">
-          	<input type="text" name="Nom_team" id="Nom_team"  placeholder="*Nom de la team" size="25" maxlength="70" /><br />
-              <input type="text" name="Sport" id="Sport" placeholder="*Sport" size="25" /><br />
-              <input type="text" name="Ville" id="Ville" placeholder="*Ville" size="25"  /><br />
+           <div><input type="text" name="Nom_team" id="Nom_team"  placeholder="*Nom de la team" size="25" maxlength="70" />*</div><br />
+              <div><input type="text" name="Sport" id="Sport" placeholder="*Sport" size="25" />*</div><br />
+              <div><input type="text" name="Ville" id="Ville" placeholder="*Ville" size="25"  />*</div><br />
               <input type="text" name="Club" id="Club" placeholder="Club" size="25" /><br />
               <h4 class="titrerouge">Le club n'est pas reconnu ! </h4><br />
             <textarea name="description" id="description" rows="10" cols="50" placeholder="Description du groupe"/></textarea> <br /> 
