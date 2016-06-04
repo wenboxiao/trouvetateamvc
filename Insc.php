@@ -38,7 +38,7 @@
 							'NomUtilisateur' => $_POST['Pseudo'],
 							'ville_id' => $Ville,
 							'Mail' => $_POST['Mail'],
-							'MotDePass' => $_POST['Pass'],
+							'MotDePass' => MD5($_POST['Pass']),
 							'Nom' => $_POST['Nom'],
 							'Prenom' => $_POST['Prenom'],
 							'Telephone' => $_POST['Telephone']

@@ -21,6 +21,9 @@
               <label for="Mail">E-mail :</label> <input type="email" name="Mail" id="Mail"  size="25" maxlength="70"/><br />
               <h4 class="titrerouge">Les champs ne sont pas valides !</h4>  <br/>
           </div>
+          <input  name="token" type="hidden"   >
+		  <input  name="time" type="hidden"   >
+		  
               <h1 class="boutonp3"><input type="submit" value="Valider"  class="bouton3"></h1>
         </form>
     <footer >

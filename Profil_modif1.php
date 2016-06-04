@@ -23,7 +23,14 @@
               
              
           </div>
-              <h1 class="boutonp3"><input type="submit" value="Valider"  class="bouton3"></h1>
+             <h1 class="boutonp3"><input type="submit" value="Valider"  class="bouton3"></h1><br /><br /><br/>
+        </form>
+        
+          <h1 class="titrebleu">Modifier votre mot de passe: </h1><br/> <br/>
+        <form method="post" action="Profil_modif_php.php" class="centrerco">
+         <label for="Pass">Mot de Passe :</label><input type="password" name="Pass" id="Pass"  size="25" maxlength="70"/><br />
+         <label for="Confi">Confirmation :</label><input type="password" name="Confi" id="Confi"   size="25" maxlength="70"/><br />
+         <h1 class="boutonp3"><input type="submit" value="Valider"  class="bouton3"></h1><br /><br />
         </form>
     <footer >
     	<?php include("Barrer.php"); ?>

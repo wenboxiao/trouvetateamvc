@@ -17,7 +17,7 @@
 			$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE NomUtilisateur = ?');
 			$req->execute(array($_POST['tttpseudo']));
 			if($donnees = $req->fetch()){
-				if ($_POST['tttpass']==$donnees['MotDePass']) {
+				if (MD5($_POST['tttpass'])==$donnees['MotDePass']) {
 					if($donnees['is_banned']==0) {
 						$_SESSION['tttpseudo']=$_POST['tttpseudo'];
 	        			$_SESSION['tttpass']=1;

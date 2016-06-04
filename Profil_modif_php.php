@@ -34,6 +34,7 @@ if($do = $req->fetch()){
 	
 		
 		
+		
 
 
 if ((isset($_POST['Nom'])) ) {
@@ -80,6 +81,25 @@ if ((isset($_POST['Nom'])) ) {
 						'pseudo' => $pseudo,
 				));
 				$requ->closeCursor();}
+				
+				
+				if ((isset($_POST['Pass'])) ) {
+				
+				
+					if (MD5($_POST['Pass'])!=MD5($_POST['Confi'])){
+						include("Profil_modif2.php");}
+							
+					elseif($_POST['Pass']!=""){
+							
+							$requ = $bdd->prepare('UPDATE utilisateurs SET MotDePass = :nv_pass WHERE id_utilisateur = :pseudo');
+							$requ->execute(array(
+									'nv_pass' => MD5($_POST['Pass']),
+									'pseudo' => $pseudo,
+							));
+							$requ->closeCursor();
+						}
+							
+				}
 	include("profil_modif3.php");
 		
 ?>
