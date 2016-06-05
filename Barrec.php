@@ -62,7 +62,7 @@
                             <ul>
                                 <li><a href="#">Forum</a></li>
                                 <li><a href="FAQ.php">FAQ</a></li>
-                                <li><a href="#">Nous contacter</a></li>
+                                <li><a href="Nous_contacter.php">Nous contacter</a></li>
                             </ul>
                     </li>
                     <?php

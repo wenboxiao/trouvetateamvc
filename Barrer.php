@@ -9,3 +9,4 @@
     </div>
     <h1><input type="submit" value="TROUVE TA TEAM"  class="bouton3"></h1>
 </form>
+<p> Vous pouvez consulter ici nos <a href="les_mentions_legales.php" class="titrevert">Mentions légales</a> ou nos <a href="les_conditions_generales.php" class="titrevert">Conditions générales d'utilisations</a></p>
