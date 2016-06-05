@@ -15,7 +15,8 @@ if($donnees = $reqz -> fetch()) {
 	$conditions=$donnees['conditions_d_utilisation'];
 	if(isset($newlogo)) {
 		$logo="http://localhost/trouvetateamvc/".$newlogo;
-		echo '<p class="titrerouge"> Un nouveau logo à été mis en ligne </p>';
+		echo '<p class="titrerouge"> Un nouveau logo à été mis en ligne <br/>
+		L\'url à été mis à jour automatiquement</p>';
 	}
 	else {
 		$logo=$donnees['logo'];

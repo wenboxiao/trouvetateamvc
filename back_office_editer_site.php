@@ -15,8 +15,7 @@
         <p class="centrerco"> Vous editez ici le site internet :
         </p>
       <?php include("back_office_editer_site_preremplissage.php"); ?> 
-        <div class="space"></div>     
-       
+        <div class="space"></div>
         <form method="post" action="back_office_editer_site_php.php" class="centrerco">
           <div class="centrerco">
               <label for="Nom_site">Nom du site :</label><input type="text" name="Nom_site" id="Nom_site" size="30" value=<?php echo '"'.$nom_site.'"'; ?> />
