@@ -15,13 +15,13 @@ if ((isset($_SESSION['tttpseudo']))&&(isset($_SESSION['tttpass']))) {
 		$Droits=$donnees['DroitAdmin'];  
 	}
 	// Et on verifie qu'il est bien administrateur
-	if(($Droits==1)||($Droits==2)) {
+	if($Droits==2) {
 		$verification="OK";
 	}
 
 }
 if($verification!="OK") {
-    header('Location: http://localhost/trouvetateamvc/back_office_pas_d_acces.php');
+    header('Location: http://localhost/trouvetateamvc/back_office_pas_d_acces_admin.php');
     exit();
 }
 ?>

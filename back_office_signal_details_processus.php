@@ -1,13 +1,12 @@
 <?php
-
 try {
-    $bddt = new PDO('mysql:host=localhost;dbname=trouve_ta_team;charset=utf8', 'root', '');
+    include('TTT_BDD.php');
 }
 catch(Exception $e) {
     die('Erreur : '.$e->getMessage());
 }
 
-$reqt = $bddt->prepare('SELECT * FROM signalement_abus WHERE id_signalement=?');
+$reqt = $bdd->prepare('SELECT * FROM signalement_abus WHERE id_signalement=?');
 $reqt -> execute(array($_POST['id_signalement_details']));
 if ($donnees = $reqt->fetch() ){
     $id_delateur=$donnees['id_delateur'];
@@ -16,7 +15,7 @@ if ($donnees = $reqt->fetch() ){
     $motif=$donnees['motif_signalement'];
 
     // On récupère le nom du délateur
-    $reqx= $bddt -> prepare('SELECT * FROM utilisateurs WHERE id_utilisateur=?');
+    $reqx= $bdd -> prepare('SELECT * FROM utilisateurs WHERE id_utilisateur=?');
 	$reqx->execute(array($id_delateur
 						));
 	if($don = $reqx->fetch() ){
@@ -26,7 +25,7 @@ if ($donnees = $reqt->fetch() ){
 	$reqx->closeCursor();
 
 	// Et celui du dénoncé
-	$reqy= $bddt -> prepare('SELECT * FROM utilisateurs WHERE id_utilisateur=?');
+	$reqy= $bdd -> prepare('SELECT * FROM utilisateurs WHERE id_utilisateur=?');
 	$reqy->execute(array($id_utilisateur_denonce
 						));
 	if($information = $reqy->fetch() ){
@@ -41,7 +40,7 @@ if ($donnees = $reqt->fetch() ){
 				$type="de l'utilisateur";
 			break;
 			case 2 :
-				$reqa= $bddt-> prepare('SELECT * FROM groupes WHERE id_groupe=?');
+				$reqa= $bdd-> prepare('SELECT * FROM groupes WHERE id_groupe=?');
 				$reqa->execute(array($id_objet
 									));
 				if($info = $reqa->fetch() ){
@@ -51,7 +50,7 @@ if ($donnees = $reqt->fetch() ){
 				$type="du groupe";
 			break;
 			case 3 :
-				$reqa= $bddt -> prepare('SELECT * FROM clubs WHERE id_club=?');
+				$reqa= $bdd -> prepare('SELECT * FROM clubs WHERE id_club=?');
 				$reqa->execute(array($id_objet
 									));
 				if($info = $reqa->fetch() ){
@@ -61,7 +60,7 @@ if ($donnees = $reqt->fetch() ){
 				$type="du club";
 			break;
 			case 4 :
-				$reqa= $bddt -> prepare('SELECT * FROM sujets_du_forum WHERE id_sujetforum=?');
+				$reqa= $bdd -> prepare('SELECT * FROM sujets_du_forum WHERE id_sujetforum=?');
 				$reqa->execute(array($id_objet
 									));
 				if($info = $reqa->fetch() ){
@@ -71,7 +70,7 @@ if ($donnees = $reqt->fetch() ){
 				$type="du sujet du forum";
 			break;
 			case 5 :
-				$reqa= $bddt -> prepare('SELECT * FROM posts_du_forum WHERE id_post=?');
+				$reqa= $bdd -> prepare('SELECT * FROM posts_du_forum WHERE id_post=?');
 				$reqa->execute(array($id_objet
 									));
 				if($info = $reqa->fetch() ){
@@ -81,7 +80,7 @@ if ($donnees = $reqt->fetch() ){
 				$type="du post du forum";
 			break;
 			case 6 :
-				$reqa= $bddt -> prepare('SELECT * FROM photos WHERE id_photo=?');
+				$reqa= $bdd -> prepare('SELECT * FROM photos WHERE id_photo=?');
 				$reqa->execute(array($id_objet
 									));
 				if($info = $reqa->fetch() ){
