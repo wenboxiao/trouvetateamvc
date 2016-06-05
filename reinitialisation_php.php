@@ -48,7 +48,7 @@ $reponse      = $expediteur;
 $codehtml=
     '<html><body>'.
     '<h1>Récupération de votre mot de passe.</h1>'.
-    'Votre compte Trouve Ta Team sous le pseudo:'.'<b>'.$pseudo.'</b><br>'.
+    'Votre compte  sous le pseudo:'.'<b>'.$pseudo.'</b><br>'.
     
     'Voici votre code pour vous connecter:'.'<b>'.$token.'</b><br><br>'.
     'ATTENTION ce code sera valide pendant une periode de 10 minutes'.'<br>'.

@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="stylettt.css" />
         <link rel="stylesheet" href="Amb.css" />
         <link rel="icon" type="image/png" href="image/faviconessai.png" />
-        <title>Trouve ta Team</title>
+        <title><?php include("Nom_site.php"); ?></title>
   </head>
   <body>
      <?php include("Barrec.php"); ?>

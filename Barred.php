@@ -1,6 +1,6 @@
 <div class="head">
         <div class="logo">
-            <a href="Trouvetateam.php"><img src="image/LOGONtest.png" alt="Logo"/></a>
+            <a href="Trouvetateam.php"><img src=<?php include("dernier_logo.php"); ?> alt="Logo"/></a>
         </div> 
         <div class="right_head">
             <div class="zone_insription_et_connexion">
