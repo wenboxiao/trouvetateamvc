@@ -84,9 +84,11 @@
                                     <a href="#">Arrière Boutique</a>
                                     <ul>
                                         <li><a href="back_office_recherche_utilisateur.php">Modérer des utilisateurs</a></li>
-                                        <li><a href="back_office_faq.php">Editer la FAQ</a></li>
-                                        <li><a href="#">Editer le site</a></li>
-                                        <li><a href="back_office_signal_apercu.php">Consulter les signalement d\'abus</a></li>
+                                        <li><a href="back_office_faq.php">Editer la FAQ</a></li>';
+                        if($Droits==2) {
+                            echo    '<li><a href="back_office_editer_site.php">Editer le site</a></li>';
+                        }
+                        echo        '<li><a href="back_office_signal_apercu.php">Consulter les signalement d\'abus</a></li>
                                     </ul>
                             </li>
                             ';

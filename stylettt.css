@@ -41,6 +41,20 @@ color: rgb(233,7,13,1);
 	padding-left: 5%;
 	font-size: 22px;
 }
+.boutonh2{
+	display: inline;
+	width: 40px;
+	height: 30px;
+	font-size: 15px;
+	color:white;
+	background-color: red;
+	border-bottom: solid;
+	border-bottom-color: rgb(140,30,21);
+	border-radius: 2px;
+	margin-right: 6px;
+	align-items: center;
+	font-size: 18px;
+}
 .boutonpc{
 	flex:7;
 	display: flex;
