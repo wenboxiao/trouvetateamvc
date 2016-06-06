@@ -31,7 +31,7 @@
  			<input  name="sport_club" type="hidden"  value="<?php echo  $_POST['sport_club']; ?>" >
  			<input  name="adresse_club" type="hidden"  value="<?php echo  $_POST['adresse_club']; ?>" >
  			<input  name="mail_club" type="hidden"  value="<?php echo  $_POST['mail_club']; ?>" >
- 			<div class="spacearound"><h3><button type=submit class="decox"> Modifier</button></h3></div></form>
+ 			<div class="spacearound"><h3><button type=submit class="bouton3"> Modifier</button></h3></div></form>
  	 </div>
     <footer >
     	<?php include("Barrer.php"); ?>

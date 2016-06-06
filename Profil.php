@@ -23,7 +23,7 @@
         <div class="spacearound"><div class="space2"></div><h3 class="blue">Téléphone </h3> <h3 class="green">0<?php echo  $_SESSION['ttttelephone']; ?></h3><div class="space2"></div></div>
         <div class="spacearound"><div class="space2"></div><h3 class="blue">E-Mail </h3> <h3 class="green"><?php echo  $_SESSION['tttmail']; ?></h3><div class="space2"></div></div>
         <div class="spacearound"><div class="space2"></div><h3 class="blue">Mot de passe </h3> <h3 class="green">Top Secret</h3><div class="space2"></div></div>
-        <div class="spacearound"><h3><a href="Profil_modif.php" class="decox"> Modifier </a></h3></div>
+        <div class="spacearound"><h3><a href="Profil_modif.php" class="bouton3"> Modifier </a></h3></div>
     </div>
     <footer >
     	<?php include("Barrer.php"); ?>
