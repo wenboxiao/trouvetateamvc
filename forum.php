@@ -46,6 +46,6 @@ include('barrec.php');
 			include('forum-1.php');
 		}
 	?>
-	<?php include('barrer.php')?>
+	<?php include('barrer.php'); ?>
 </body>
 </html>
