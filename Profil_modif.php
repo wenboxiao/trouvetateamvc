@@ -15,6 +15,13 @@
   <body>
      <?php include("Barrec.php"); ?>
      <section>
+        <form action="cible_envoi.php" method="post" enctype="multipart/form-data">
+          <p>
+            Modifier la photo de profil:<br />
+                <input type="file" name="monfichier" /><br />
+                <h1 class="boutonp3"><input type="submit" value="Envoyer la photo" class="bouton3"/></h1>
+          </p>
+        </form>
  <div class="space"></div>     
         <form method="post" action="Profil_modif_php.php" class="centrerco">
           <div class="centrerco">
