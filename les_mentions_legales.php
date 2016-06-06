@@ -9,7 +9,12 @@
         <title><?php include("Nom_site.php"); ?></title>
     </head>
     <body>
-    	<?php include("Barrec.php"); ?> 
+    	<?php 
+          if ((!isset($_SESSION['tttpseudo']))&&(!isset($_SESSION['tttpass']))) {
+              include("Barred.php"); }
+          else {
+              include("Barrec.php"); }
+        ?> 
         <h1 class="titrebleu"> Mentions Légales </h1>
         <p class="centrerco">
         <?php include("les_mentions_legales_php.php"); ?>
