@@ -1,7 +1,7 @@
 	<h3><p class="titrevert">Aide</p></h3>
 	<a class="bouton"href="?page=ajouter-sujet">Ajouter un sujet</a>
 	<ul>
-	<table  border="1"  bordercolor="blue" width="80%" align="center" cellspacing="10" cellpadding="10" color="blue">
+	<table  border="1"  bordercolor="blue" width="80%" align="center" cellspacing="10" cellpadding="25" color="blue">
 	<tr>
 		<td width=50%> Sujet </td>
 		<td width=30%>ecrit par :</td>
