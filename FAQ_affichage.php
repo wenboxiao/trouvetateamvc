@@ -14,11 +14,11 @@ while ($donnees = $reqz->fetch() ){
     $id_question=$donnees['id_question'];
     
     echo 
-        '<div class="spacearound">
+        '<p class="centrerco">
             <div class="space2"></div>
-            <h3 class="blue">'.$question.'</h3> 
-            <h3 class="green">'.$reponse.'</h3>
-        <div class="space2"></div></div>';
+            <h3 class="green">'.$question.'</h3> 
+            '.$reponse.'
+        <div class="space2"></div></p>';
 
     /*
     echo 
