@@ -1,4 +1,23 @@
-<?php session_start(); ?>
+<?php session_start(); 
+    include('TTT_BDD.php');
+    $reqm =  $bdd->query('SELECT * FROM utilisateurs WHERE is_banned=\'0\''); //On récupère tous les membres pas actifs
+    while ($donnees = $reqm->fetch())
+    {
+        $date_connexion = $donnees['derniere_connexion'];
+        $Datec=explode('-',$date_connexion);
+        $dateco=mktime(0,0,0,$Datec[1],$Datec[2],$Datec[0]);
+        $date = time();
+        $difference = $date - $dateco;
+        $nbreSecondesAn = (3600*24)*365;
+        if ($difference > $nbreSecondesAn AND $date_connexion!='0000-00-00')//On supprime le membre
+        {
+            $requ = $bdd->prepare('DELETE FROM utilisateurs WHERE id_utilisateur= :id_utilisateur ');
+            $requ->execute(array(
+                'id_utilisateur' => $donnees['id_utilisateur']
+        ));
+        }
+    }
+?>
 <?php include("back_office_verif.php"); ?>
 <!DOCTYPE html>
 <html>

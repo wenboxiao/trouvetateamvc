@@ -31,9 +31,10 @@
 						$reqa = $bdd->prepare('SELECT ville_id FROM villes_france_free WHERE ville_nom_reel = ?');
 						$reqa->execute(array($_POST['Ville']));	
 						if($donne = $reqa->fetch()){
+							$time=date('Y-m-d', time());
 							$Ville=$donne['ville_id'];
 							$reqa->closeCursor();
-							$req = $bdd->prepare('INSERT INTO utilisateurs(NomUtilisateur, DroitAdmin, ville_id, Mail, MotDePass, Nom, Prenom, Telephone) VALUES(:NomUtilisateur, 0, :ville_id, :Mail, :MotDePass, :Nom, :Prenom, :Telephone)');
+							$req = $bdd->prepare('INSERT INTO utilisateurs(NomUtilisateur, DroitAdmin, ville_id, Mail, MotDePass, Nom, Prenom, Telephone, derniere_connexion) VALUES(:NomUtilisateur, 0, :ville_id, :Mail, :MotDePass, :Nom, :Prenom, :Telephone, :derniere_connexion)');
 							$req->execute(array(
 							'NomUtilisateur' => $_POST['Pseudo'],
 							'ville_id' => $Ville,
@@ -41,7 +42,8 @@
 							'MotDePass' => MD5($_POST['Pass']),
 							'Nom' => $_POST['Nom'],
 							'Prenom' => $_POST['Prenom'],
-							'Telephone' => $_POST['Telephone']
+							'Telephone' => $_POST['Telephone'],
+							'derniere_connexion' => $time
 							));
 							$req->closeCursor();
 						}
