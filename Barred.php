@@ -63,7 +63,7 @@
                         <li>
                                 <a href="#">Aide</a>
                                 <ul>
-                                    <li><a href="#">Forum</a></li>
+                                    <li><a href="forum - deco.php">Forum</a></li>
                                     <li><a href="FAQ.php">FAQ</a></li>
                                     <li><a href="#">Nous contacter</a></li>
                                 </ul>

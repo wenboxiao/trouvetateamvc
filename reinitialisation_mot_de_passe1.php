@@ -15,7 +15,7 @@
  	
         <form method="post" action="reinitialisation_php.php" class="centrerco">
           <div class="centrerco">
-          <h1 class="titrerouge">Veillez entrer votre pseudo et e-mail enregistrés lors de votre inscription:</h1>  <br/>
+          <h1 class="titrerouge">Veuillez entrer votre pseudo et e-mail enregistrés lors de votre inscription:</h1>  <br/>
           	  <label for="pseudo">Pseudo :</label><input type="text" name="pseudo" id="pseudo"   size="10" maxlength="30"  />
              
               <label for="Mail">E-mail :</label> <input type="email" name="Mail" id="Mail"  size="25" maxlength="70"/><br />

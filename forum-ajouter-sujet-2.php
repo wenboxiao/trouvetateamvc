@@ -3,7 +3,7 @@
 	<form method="post">
 	<?php
 		if(isset($message))
-			echo '<p>'.$message.'</p>';
+			echo '<p>'.htmlspecialchars($message).'</p>';
 	?>
 		<label>Titre : </label><input type="text" name="titre"><br>
 		<label>Message : </label><br>

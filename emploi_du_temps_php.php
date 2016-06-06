@@ -74,8 +74,8 @@
  	$reqa->closeCursor();
  	}
  	
- 	echo $nomgroupe.'</br>'.
- 	 	 $description.
+ 	echo htmlspecialchars($nomgroupe).'</br>'.
+ 	 	 htmlspecialchars($description).
  	'<form method="post"  action="emploi_du_temps_groupe.php">
  			<input  name="id_groupe" type="hidden"  value="'.$groupe_id.'" >
  			<input  name="nom_team" type="hidden"  value="'.$nomgroupe.'" >

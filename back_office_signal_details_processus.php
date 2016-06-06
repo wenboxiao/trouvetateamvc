@@ -92,22 +92,22 @@ if ($donnees = $reqt->fetch() ){
 	}
 
     echo '<form method="post" action="back_office_detail_utilisateur.php">
-    		Signalement émis par : '.$prenom_delateur.' '.$nom_delateur.'
-    		<input name="id_utilisateur" type="hidden" value="'.$id_delateur.'">
-    		<input name="id_signalement_concerne" type="hidden" value="'.$donnees['id_signalement'].'">
+    		Signalement émis par : '.htmlspecialchars($prenom_delateur).' '.htmlspecialchars($nom_delateur).'
+    		<input name="id_utilisateur" type="hidden" value="'.htmlspecialchars($id_delateur).'">
+    		<input name="id_signalement_concerne" type="hidden" value="'.htmlspecialchars($donnees['id_signalement']).'">
     		<button type="submit">Voir</button>
     	</form> <br/> 
-    	A propos '.$type.' : '.$nomobjet.'<br/>
+    	A propos '.htmlspecialchars($type).' : '.htmlspecialchars($nomobjet).'<br/>
     	<form method="post" action="back_office_detail_utilisateur.php">
-    		L\'utilisateur qui en est responsable est : '.$prenom_utilisateur_denonce.' '.$nom_utilisateur_denonce.'
-    		<input name="id_utilisateur" type="hidden" value="'.$id_utilisateur_denonce.'">
-    		<input name="id_signalement_concerne" type="hidden" value="'.$donnees['id_signalement'].'">
+    		L\'utilisateur qui en est responsable est : '.htmlspecialchars($prenom_utilisateur_denonce).' '.htmlspecialchars($nom_utilisateur_denonce).'
+    		<input name="id_utilisateur" type="hidden" value="'.htmlspecialchars($id_utilisateur_denonce).'">
+    		<input name="id_signalement_concerne" type="hidden" value="'.htmlspecialchars($donnees['id_signalement']).'">
     		<button type="submit">Voir</button>
     	</form> <br/>
     	Il a été signalé pour le motif suivant :<br/>
     	'.$motif.' <br/>
     	<form method="post" action="back_office_signal_apercu.php">
-    		<input name="id_signalement_supprime" type="hidden" value="'.$donnees['id_signalement'].'">
+    		<input name="id_signalement_supprime" type="hidden" value="'.htmlspecialchars($donnees['id_signalement']).'">
     		<button type="submit">Supprimer le message</button>
     	</form>
     	<form method="post" action="back_office_signal_apercu.php">

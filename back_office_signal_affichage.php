@@ -96,17 +96,17 @@ while ($donnees = $reqz->fetch() ){
 			break;
 	}
 
-    echo 'Signalement émis par : '.$prenom_delateur.' '.$nom_delateur.'<br/> 
-    	A propos '.$type.' : '.$nomobjet.'<br/>
-    	L\'utilisateur qui en est responsable est : '.$prenom_utilisateur_denonce.' '.$nom_utilisateur_denonce.'<br/>
+    echo 'Signalement émis par : '.htmlspecialchars($prenom_delateur).' '.htmlspecialchars($nom_delateur).'<br/> 
+    	A propos '.htmlspecialchars($type).' : '.htmlspecialchars($nomobjet).'<br/>
+    	L\'utilisateur qui en est responsable est : '.htmlspecialchars($prenom_utilisateur_denonce).' '.htmlspecialchars($nom_utilisateur_denonce).'<br/>
     	Il a été signalé pour le motif suivant :<br/>
-    	'.$motif.' <br/>
+    	'.htmlspecialchars($motif).' <br/>
     	<form method="post" action="back_office_signal_details.php">
-    		<input name="id_signalement_details" type="hidden" value="'.$donnees['id_signalement'].'">
+    		<input name="id_signalement_details" type="hidden" value="'.htmlspecialchars($donnees['id_signalement']).'">
     		<button type="submit">Plus de détails</button>
     	</form>
     	<form method="post" action="back_office_signal_apercu.php">
-    		<input name="id_signalement_supprime" type="hidden" value="'.$donnees['id_signalement'].'">
+    		<input name="id_signalement_supprime" type="hidden" value="'.htmlspecialchars($donnees['id_signalement']).'">
     		<button type="submit">Supprimer</button>
     	</form>';
 }
