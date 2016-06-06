@@ -17,7 +17,7 @@
 ?>
         <section>
           <div class="centrerco">
-            <p class="centrer"><h3 class="blue">Vous Ítes d√©j√ membre de ce groupe !</h3></p>
+            <p class="centrer"><h3 class="blue">Vous &ecirctes d√©j&agrave membre de ce groupe !</h3></p>
             <p class="centrer"><img src="image/LOGONtest.png" alt="Logo"/></p>
             
           </div>
