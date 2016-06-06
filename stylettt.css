@@ -11,7 +11,7 @@ color: rgb(233,7,13,1);
 	color: white;
 }
 .salut{
-	color: white;
+	color: yellow;
 }
 .pseudo{
 	color:#01EB2B;
@@ -59,6 +59,7 @@ color: rgb(233,7,13,1);
 	flex:7;
 	display: flex;
 	justify-content:spacearound;
+	
 }
 .px{
 	flex:0.2;
@@ -129,8 +130,8 @@ color: rgb(233,7,13,1);
 	font-size: 20px;
 }
 .decox{
-	text-decoration: none;
-	color:rgb(0,118,174);
+	
+	color:yellow;
 }
 .titrevert{
 	color:rgb(0,176,80);

@@ -7,7 +7,7 @@
                 <div class="boutonpc">
                 <h3 class="salut">Salut</h3><div class="px"></div><h3 class="pseudo"><?php echo $_SESSION['tttpseudo'];?></h3>
                 </div>
-                <h3 class="decox"><a href="Deconnexion.php" > Déconnexion </a></h3>
+                <h3 class="decox" href="Deconnexion.php" > Déconnexion </h3>
             </div>
         <div class="barre_de_navigation">
             <nav id="barre2">
@@ -60,7 +60,7 @@
                     <li>
                             <a href="#">Aide</a>
                             <ul>
-                                <li><a href="#">Forum</a></li>
+                                <li><a href="forum.php">Forum</a></li>
                                 <li><a href="FAQ.php">FAQ</a></li>
                                 <li><a href="Nous_contacter.php">Nous contacter</a></li>
                             </ul>

@@ -34,10 +34,7 @@
         justify-content: center;
         align-items: center;
 }
-.menu a:hover
-{
 
-}
 .menu li ul li:hover
 {
         background : #01EB2B; /* couleur de fond */        
