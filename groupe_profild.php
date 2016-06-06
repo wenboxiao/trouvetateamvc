@@ -62,7 +62,7 @@
  	$reqi->closeCursor();
  	
  	
- 	echo $donneesu['nomgroupe'].
+ 	echo htmlspecialchars($donneesu['nomgroupe']).
  	'<form method="post"  action="groupe_profil.php">
  			<input  name="id_groupe" type="hidden"  value="'.$donneesu['id_groupe'].'" >
  			<input  name="nom_team" type="hidden"  value="'.$donneesu['nomgroupe'].'" >

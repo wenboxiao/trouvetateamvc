@@ -46,7 +46,7 @@
 			<div class="space"></div>	
 			<label for="tttpseudo" class="titrerouge"> Signaler un contenu inaproprié </label> <br /><h1>
 			<p class="textebleu"> 
-			Vous signalez <?php echo($type); ?> nommé <?php echo($_POST['nom_objet']); ?> <br/>
+			Vous signalez <?php echo(htmlspecialchars($type)); ?> nommé <?php echo(htmlspecialchars($_POST['nom_objet'])); ?> <br/>
 			Nous vous remercions de prendre le temps d'aider au bon fonctionnement du site <br/>
 			Veuillez entrer ci-dessous le motif de signalement :
 			</p>

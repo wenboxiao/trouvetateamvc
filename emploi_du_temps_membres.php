@@ -47,10 +47,10 @@
  	}
  	$reqi->closeCursor();
  	
- 	echo $nom.'       '.$prenom.'</br>'.
- 	 	 $ville.'</br>'.
- 	 	 '0'.$telephone.'</br>'.
- 	 	 $mail.'</br>'.'</br>';
+ 	echo htmlspecialchars($nom).'       '.htmlspecialchars($prenom).'</br>'.
+ 	 	 htmlspecialchars($ville).'</br>'.
+ 	 	 '0'.htmlspecialchars($telephone).'</br>'.
+ 	 	 htmlspecialchars($mail).'</br>'.'</br>';
 
  }
  	$requ->closeCursor();

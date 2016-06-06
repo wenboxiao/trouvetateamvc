@@ -16,8 +16,8 @@ while ($donnees = $reqz->fetch() ){
     echo 
         '<p class="centrerco">
             <div class="space2"></div>
-            <h3 class="green">'.$question.'</h3> 
-            '.$reponse.'
+            <h3 class="green">'.htmlspecialchars($question).'</h3> 
+            '.htmlspecialchars($reponse).'
         <div class="space2"></div></p>';
 
     /*

@@ -45,14 +45,14 @@ while ($donnees = $reqz->fetch() ){
     $id_question=$donnees['id_question'];
 
     echo '<p class="centrerco">
-            <h3 class="titrevert">'.$question.'</h3><br/>'
-            .$reponse.'</br>'.
+            <h3 class="titrevert">'.htmlspecialchars($question).'</h3><br/>'
+            .htmlspecialchars($reponse).'</br>'.
         '<form method="post" action="back_office_faq_editer_question.php">
-            <input name="modification" type="hidden" value="'.$id_question.'">
+            <input name="modification" type="hidden" value="'.htmlspecialchars($id_question).'">
             <button type="submit">Modifier</button>
         </form>
         <form method="post" action="back_office_faq.php">
-            <input name="suppression" type="hidden" value="'.$id_question.'">
+            <input name="suppression" type="hidden" value="'.htmlspecialchars($id_question).'">
             <button type="submit">Supprimer</button>
         </form>
         </p>';

@@ -28,14 +28,14 @@ echo '<form method="post" action="back_office_faq.php" class="centrerco">
 			<div></div>
 	        <label for="question">Question : </label><br/>
 	        <textarea name="question" id="question" rows="2" cols="90">'
-	        .$question.
+	        .htmlspecialchars($question).
 	        '</textarea><br/><div class="space"></div>
 	        <label for="reponse">Reponse : </label><br/>
 	        <textarea name="reponse" id="reponse" rows="7" cols="90">'
-	        .$reponse.
+	        .htmlspecialchars($reponse).
 	        '</textarea>
         <p>
-        <input name="edition" type="hidden" value="'.$id_question.'">
+        <input name="edition" type="hidden" value="'.htmlspecialchars($id_question).'">
 	    <button type="submit">Editer</button>
     </form>';
  

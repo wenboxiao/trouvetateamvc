@@ -16,7 +16,7 @@
         
           <h1 class="titrerouge">La limite de temps est écoulée ou le code est invalide !</h1><br/> <br/>
           	
-          <h1 class="titrebleu">Veillez recommencer l'opération. </h1><br/> <br/>
+          <h1 class="titrebleu">Veuillez recommencer l'opération. </h1><br/> <br/>
           	
       
     <footer >

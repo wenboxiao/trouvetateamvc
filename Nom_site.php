@@ -10,7 +10,7 @@ catch(Exception $e) {
 $reqz = $bdd -> query('SELECT * FROM formulaire_admin ORDER BY id_version_site DESC');
 if($donnees = $reqz -> fetch()) {
 	
-	echo $donnees['nom_du_site'];
+	echo htmlspecialchars($donnees['nom_du_site']);
 }
 $reqz->closeCursor();
 

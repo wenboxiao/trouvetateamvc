@@ -56,37 +56,37 @@ $req->execute(array($_GET['ville_id']));
 		
 		    
 if ((isset($_SESSION['tttpseudo'])==false)&&(isset($_SESSION['tttpass'])==false)) {
-	echo $donnees['nomgroupe'].'</br>'.
-		'Sport:     '.$_GET['nomsport'].'</br>'.
-			'Ville:     '.$_GET['nomville'].'</br>'.
-			'Club:     '.$_GET['nomclub'].'</br>'.
-			'Administrateur:     '.$_GET['admin'].'</br>'.
-			'Description:     '.$_GET['description'].'</br>'.
-			'Nombre de membres:     '.$_GET['nbmembre'].'</br>'.
+	echo htmlspecialchars($donnees['nomgroupe']).'</br>'.
+		'Sport:     '.htmlspecialchars($_GET['nomsport']).'</br>'.
+			'Ville:     '.htmlspecialchars($_GET['nomville']).'</br>'.
+			'Club:     '.htmlspecialchars($_GET['nomclub']).'</br>'.
+			'Administrateur:     '.htmlspecialchars($_GET['admin']).'</br>'.
+			'Description:     '.htmlspecialchars($_GET['description']).'</br>'.
+			'Nombre de membres:     '.htmlspecialchars($_GET['nbmembre']).'</br>'.
 		     '<form method="post"  action="Connexion.php">
  			
  					<button type="submit">Rejoindre!</button></form>'.'</br>';
 	
 }
 else{
-	echo $donnees['nomgroupe'].'</br>'.
-			'Sport:     '.$_GET['nomsport'].'</br>'.
-			'Ville:     '.$_GET['nomville'].'</br>'.
-			'Club:     '.$_GET['nomclub'].'</br>'.
-			'Administrateur:     '.$_GET['admin'].'</br>'.
-			'Description:     '.$_GET['description'].'</br>'.
-			'Nombre de membres:     '.$_GET['nbmembre'].'</br>'.
+	echo htmlspecialchars($donnees['nomgroupe']).'</br>'.
+			'Sport:     '.htmlspecialchars($_GET['nomsport']).'</br>'.
+			'Ville:     '.htmlspecialchars($_GET['nomville']).'</br>'.
+			'Club:     '.htmlspecialchars($_GET['nomclub']).'</br>'.
+			'Administrateur:     '.htmlspecialchars($_GET['admin']).'</br>'.
+			'Description:     '.htmlspecialchars($_GET['description']).'</br>'.
+			'Nombre de membres:     '.htmlspecialchars($_GET['nbmembre']).'</br>'.
 		     '<form method="post"  action="recherche_inscription_public.php">
- 			<input  name="Groupe" type="hidden"  value="'.$idgroupe.'" >
- 			<input  name="Utilisateur" type="hidden"  value="'.$pseudo.'" >
- 		 	<input  name="Nbmembres" type="hidden"  value="'.$_GET['nbmembre'].'" >
+ 			<input  name="Groupe" type="hidden"  value="'.htmlspecialchars($idgroupe).'" >
+ 			<input  name="Utilisateur" type="hidden"  value="'.htmlspecialchars($pseudo).'" >
+ 		 	<input  name="Nbmembres" type="hidden"  value="'.htmlspecialchars($_GET['nbmembre']).'" >
  					<button type="submit">Rejoindre!</button></form>'.'</br>'.
  			// BOUTON DE SIGNALEMENT
  			'<form method="post" action="signalement_formulaire.php">
- 			<input  name="id_objet" type="hidden"  value="'.$id_groupe.'" >
- 			<input  name="nom_objet" type="hidden" value="'.$donnees['nomgroupe'].'">
- 			<input  name="utilisateur_denonce" type="hidden"  value="'.$admin.'" >
- 		 	<input  name="type_objet" type="hidden"  value="'.$type_objet.'" >
+ 			<input  name="id_objet" type="hidden"  value="'.htmlspecialchars($id_groupe).'" >
+ 			<input  name="nom_objet" type="hidden" value="'.htmlspecialchars($donnees['nomgroupe']).'">
+ 			<input  name="utilisateur_denonce" type="hidden"  value="'.htmlspecialchars($admin).'" >
+ 		 	<input  name="type_objet" type="hidden"  value="'.htmlspecialchars($type_objet).'" >
  					<button type="submit">Signaler un abus</button></form>'.'</br>';
 		}
 		    		

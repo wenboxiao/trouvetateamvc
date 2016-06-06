@@ -102,21 +102,21 @@
 		echo'<p>
 			<form method="post"  action="back_office_detail_utilisateur.php" class="titrevert">
 				<select name="choix_ban" id="choix_ban">
-					<option value=1 '.$optionA.'> Utilisateur Banni </option>
-					<option value=0 '.$optionB.'> Utilisateur non Banni </option>
+					<option value=1 '.htmlspecialchars($optionA).'> Utilisateur Banni </option>
+					<option value=0 '.htmlspecialchars($optionB).'> Utilisateur non Banni </option>
 				</select> ';
 		if ($Pouvoir==2) {
 		echo	'<select name="choix_privilege" id="choix_privilege">
-					<option value=0 '.$option1.'> Utilisateur </option>
-					<option value=1 '.$option2.'> Modérateur </option>
-					<option value=2 '.$option3.'> Administrateur </option>
+					<option value=0 '.htmlspecialchars($option1).'> Utilisateur </option>
+					<option value=1 '.htmlspecialchars($option2).'> Modérateur </option>
+					<option value=2 '.htmlspecialchars($option3).'> Administrateur </option>
 				</select>
-				<input  name="id_decideur" type="hidden"  value="'.$id_decideur.'">';
+				<input  name="id_decideur" type="hidden"  value="'.htmlspecialchars($id_decideur).'">';
 		}
-		echo	'<input  name="id_utilisateur" type="hidden"  value="'.$_POST['id_utilisateur'].'">';
+		echo	'<input  name="id_utilisateur" type="hidden"  value="'.htmlspecialchars($_POST['id_utilisateur']).'">';
 
 		if (isset($_POST['id_signalement_concerne'])) {
-			echo '<input name="id_signalement_concerne" type="hidden" value="'.$_POST['id_signalement_concerne'].'">';
+			echo '<input name="id_signalement_concerne" type="hidden" value="'.htmlspecialchars($_POST['id_signalement_concerne']).'">';
 		}
 
 		echo '	<button type="submit">Modifier</button>
@@ -125,7 +125,7 @@
 
 		if (isset($_POST['id_signalement_concerne'])) {
 			echo '<form method="post" action="back_office_signal_details.php">
-					<input name="id_signalement_details" type="hidden" value="'.$_POST['id_signalement_concerne'].'">
+					<input name="id_signalement_details" type="hidden" value="'.htmlspecialchars($_POST['id_signalement_concerne']).'">
 					<button type="submit">Retour au message de signalement</button>
 				</form> <br/>';
 		}

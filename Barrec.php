@@ -5,7 +5,7 @@
     <div class="right_head">
             <div class="zone_insription_et_connexion">
                 <div class="boutonpc">
-                <h3 class="salut">Salut</h3><div class="px"></div><h3 class="pseudo"><?php echo $_SESSION['tttpseudo'];?></h3>
+                <h3 class="salut">Salut</h3><div class="px"></div><h3 class="pseudo"><?php echo htmlspecialchars($_SESSION['tttpseudo']);?></h3>
                 </div>
                 <h3><a  class="decox" href="Deconnexion.php" > Déconnexion </a></h3>
             </div>

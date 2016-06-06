@@ -36,13 +36,13 @@ while ($donnees = $req->fetch() ){
 		break;
 	}
 
-	echo 'Utilisateur :     '.$NomUtilisateur.'</br>'.
-		'Prenom :     '.$Prenom.'</br>'.
-		'Nom :     '.$Nom.'</br>'.                         
-        'Statut :     '.$Statut.'</br>'.
+	echo 'Utilisateur :     '.htmlspecialchars($NomUtilisateur).'</br>'.
+		'Prenom :     '.htmlspecialchars($Prenom).'</br>'.
+		'Nom :     '.htmlspecialchars($Nom).'</br>'.                         
+        'Statut :     '.htmlspecialchars($Statut).'</br>'.
 	     
 	    '<form method="post"  action="back_office_detail_utilisateur.php">
-			<input  name="id_utilisateur" type="hidden"  value="'.$id_utilisateur.'">
+			<input  name="id_utilisateur" type="hidden"  value="'.htmlspecialchars($id_utilisateur).'">
 			<button type="submit">Plus de détails</button>
 		</form>'.'</br>';
 }
